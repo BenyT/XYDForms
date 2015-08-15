@@ -11,23 +11,23 @@ import UIKit
 // This CollectionView delegate's purpose is to calculate the size of each cell, taking into account the percentage width of each field.
 class YFCollectionViewDelegate: NSObject, UICollectionViewDelegate {
     
-    var dataSource: YFCollectionViewDataSource!
+    var formController: YFormController!
     
-    init(dataSource: YFCollectionViewDataSource) {
-        self.dataSource = dataSource
+    init(formController: YFormController) {
+        self.formController = formController
     }
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let field = dataSource.sections[indexPath.section].fields[indexPath.row]
-        return CGSizeMake(UIScreen.mainScreen().bounds.width * CGFloat(field.percentageWidth), 50) // TODO: dynamic height instead of hardcoding
+        let field = formController.collectionViewDataSource!.sections[indexPath.section].fields[indexPath.row]
+        return CGSizeMake(collectionView.frame.width * CGFloat(field.percentageWidth), formController.fieldHeight)
     }
     
 }
 
 class YFCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
-    class var cellIdentifier: String { get { return "YFFieldCellIdentifier" } }
-    class var headerIdentifier: String { get { return "YFFieldHeaderIdentifier" } }
+    static let cellIdentifier: String = "YFFieldCellIdentifier"
+    static let headerIdentifier: String = "YFFieldHeaderIdentifier"
     
     var sections: [YFSection] = []
     var textFieldDelegate: YFTextFieldDelegate!

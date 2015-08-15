@@ -47,7 +47,7 @@ class MainViewController: UIViewController, YFormDelegate {
         self.addChildViewController(formController)
         self.view.addSubview(formController.view!)
         formController.view!.setTranslatesAutoresizingMaskIntoConstraints(false)
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-(0)-[view]-(0)-|", options: NSLayoutFormatOptions.allZeros, metrics: nil, views: ["view":formController.view!]))
+        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-(0)-[form]-(0)-|", options: NSLayoutFormatOptions.allZeros, metrics: nil, views: ["form": formController.view!]))
         self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-(70)-[form]-(80)-|", options: NSLayoutFormatOptions.allZeros, metrics: nil, views: ["form": formController.view!]))
         
         submitButton.layer.cornerRadius = 8

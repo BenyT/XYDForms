@@ -16,6 +16,13 @@ class YFormController: UIViewController {
     var delegate: YFormDelegate?
     var keyboardHandler: YFKeyboardHandler?
     
+    var fieldHeight: CGFloat = 50
+    var cornerRadius: CGFloat = 0 {
+        didSet {
+            collectionView.layer.cornerRadius = cornerRadius
+        }
+    }
+
     init(cellViewName: String = "YFFieldCell") {
         super.init(nibName: nil, bundle: nil)
         // CollectionView Setup
@@ -30,7 +37,7 @@ class YFormController: UIViewController {
         
         // Delegates Setup
         collectionViewDataSource = YFCollectionViewDataSource()
-        collectionViewDelegate = YFCollectionViewDelegate(dataSource: collectionViewDataSource!)
+        collectionViewDelegate = YFCollectionViewDelegate(formController: self)
         collectionView.dataSource = collectionViewDataSource
         collectionView.delegate = collectionViewDelegate
         keyboardHandler = YFKeyboardHandler(formController: self)
@@ -40,8 +47,8 @@ class YFormController: UIViewController {
         self.view.addSubview(collectionView)
         // Constraints Setup
         collectionView.setTranslatesAutoresizingMaskIntoConstraints(false)
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-(0)-[view]-(0)-|", options: NSLayoutFormatOptions.allZeros, metrics: nil, views: ["view":collectionView]))
-        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-(0)-[view]-(0)-|", options: NSLayoutFormatOptions.allZeros, metrics: nil, views: ["view":collectionView]))
+        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-(0)-[view]-(0)-|", options: NSLayoutFormatOptions.allZeros, metrics: nil, views: ["view": collectionView]))
+        self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-(0)-[view]-(0)-|", options: NSLayoutFormatOptions.allZeros, metrics: nil, views: ["view": collectionView]))
     }
     
     required init(coder aDecoder: NSCoder) {
