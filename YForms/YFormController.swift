@@ -9,13 +9,13 @@
 import UIKit
 
 class YFormController: UIViewController {
-        
+    
     var collectionView: UICollectionView!
     var collectionViewDataSource: YFCollectionViewDataSource?
     var collectionViewDelegate: YFCollectionViewDelegate?
     var delegate: YFormDelegate?
     var keyboardHandler: YFKeyboardHandler?
-
+    
     init(cellViewName: String = "YFFieldCell") {
         super.init(nibName: nil, bundle: nil)
         // CollectionView Setup
@@ -56,13 +56,26 @@ class YFormController: UIViewController {
         collectionViewDataSource?.addField(field, inSection: section)
     }
     
+    // Add a field with a selector
+    func addField(field: YFField, inSection section: Int = 0, withPercentageWidth percentageWidth: Double = 1, withValidation validation: YFValidation? = nil, showSelector: () -> ()) {
+        field.showSelector = showSelector
+        addField(field, inSection: section, withPercentageWidth: percentageWidth, withValidation: validation)
+    }
+    
+    /* Updates the field with 'fieldName' with 'text'
+     * Added to allow 
+        - Selectors
+        - Fields pre-populating other fields
+    */
     func setText(text: String, inFieldName fieldName: String, inSection section: Int = 0) {
         if let fields = collectionViewDataSource?.sections[section].fields {
             for (index, field) in enumerate(fields) {
                 if field.name == fieldName {
                     // Update field with text
                     field.text = text
-                    delegate?.formController(self, updatedField: field as YFBasicField, atIndexPath: NSIndexPath(forRow: index, inSection: section))
+                    let indexPath = NSIndexPath(forRow: index, inSection: section)
+                    delegate?.formController(self, updatedField: field as YFBasicField, atIndexPath: indexPath)
+                    collectionView.reloadItemsAtIndexPaths([indexPath])
                     break
                 }
             }

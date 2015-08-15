@@ -79,9 +79,18 @@ class YFTextFieldDelegate: NSObject, UITextFieldDelegate {
         self.formController = formController
     }
     
-    // Tell YKeyboardHandler about the new active text field by sending a notification
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
-        NSNotificationCenter.defaultCenter().postNotificationName(YFKeyboardHandler.ActiveTextFieldUpdateNotification, object: textField)
+        if let textField = textField as? YTextField {
+            let field = formController.collectionViewDataSource!.sections[textField.indexPath.section].fields[textField.indexPath.row]
+            // Should show selector?
+            if field.shouldShowSelector {
+                field.showSelector!()
+                return false
+            } else {
+                // Tell KeyboardHandler about the new active text field by sending a notification
+                NSNotificationCenter.defaultCenter().postNotificationName(YFKeyboardHandler.ActiveTextFieldUpdateNotification, object: textField)
+            }
+        }
         return true
     }
     
@@ -126,7 +135,7 @@ class YFKeyboardHandler: NSObject {
     /* When the keyboard appears, a part of the collection view might get hidden. This delegate will add a bottom padding to the collection view, so it is visible and will scroll it if needed */
     
     static let ActiveTextFieldUpdateNotification = "YActiveTextFieldUpdateNotification"
-
+    
     private var formController: YFormController!
     private var keyboardFrame : CGRect?
     private var activeTextField: YTextField?
@@ -152,7 +161,6 @@ class YFKeyboardHandler: NSObject {
                 // Get the cell's frame
                 let value: AnyObject = notification.userInfo![UIKeyboardFrameEndUserInfoKey]!
                 keyboardFrame = formController.view.convertRect(value.CGRectValue(), fromView: nil)
-                // [Bug] TODO: Doesn't work as expected if collection view is not stick to the bottom
             }
             // Apply bottom padding
             let intersection = CGRectIntersection(formController.collectionView!.frame, keyboardFrame!)
@@ -174,7 +182,7 @@ class YFKeyboardHandler: NSObject {
     func keyboardHidden(notification: NSNotification) {
         formController.collectionView!.contentInset = UIEdgeInsetsZero
         formController.collectionView!.scrollIndicatorInsets = UIEdgeInsetsZero
-
+        
     }
     
     // Called by YTextFieldDelegate. Update active text field

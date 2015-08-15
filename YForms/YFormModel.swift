@@ -38,6 +38,14 @@ class YFField: YFBasicField {
     var errorMessage: String?
     var percentageWidth: Double = 1
     
+    // Handle selectors
+    private (set) var shouldShowSelector: Bool = false
+    var showSelector: (() -> ())? {
+        didSet {
+            shouldShowSelector = true
+        }
+    }
+    
     init(name: String, placeHolder : String) {
         super.init(name: name, text: "")
         self.placeHolder = placeHolder
