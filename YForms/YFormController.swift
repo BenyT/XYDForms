@@ -62,15 +62,15 @@ class YFormController: UIViewController {
         addField(field, inSection: section, withPercentageWidth: percentageWidth, withValidation: validation)
     }
     
-    /* Updates the field with 'fieldName' with 'text'
+    /* Updates the field with 'fieldIdentifier' with 'text'
      * Added to allow 
         - Selectors
         - Fields pre-populating other fields
     */
-    func setText(text: String, inFieldName fieldName: String, inSection section: Int = 0) {
+    func setText(text: String, inFieldWithIdentifier fieldIdentifier: String, inSection section: Int = 0) {
         if let fields = collectionViewDataSource?.sections[section].fields {
             for (index, field) in enumerate(fields) {
-                if field.name == fieldName {
+                if field.identifier == fieldIdentifier {
                     // Update field with text
                     field.text = text
                     let indexPath = NSIndexPath(forRow: index, inSection: section)

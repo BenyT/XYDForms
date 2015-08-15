@@ -34,11 +34,11 @@ class MainViewController: UIViewController, YFormDelegate {
         formController = YFormController()
         formController.delegate = self
         for i in 0..<persons.count {
-            formController.addField(YFField(name: "firstName", placeHolder: "First Name"), inSection: i, withPercentageWidth: 0.5, withValidation: nameValidation)
-            formController.addField(YFField(name: "lastName", placeHolder: "Last Name"), inSection: i, withPercentageWidth: 0.5, withValidation: lastNameValidation)
+            formController.addField(YFField(identifier: "firstName", placeHolder: "First Name"), inSection: i, withPercentageWidth: 0.5, withValidation: nameValidation)
+            formController.addField(YFField(identifier: "lastName", placeHolder: "Last Name"), inSection: i, withPercentageWidth: 0.5, withValidation: lastNameValidation)
             // Using selectors
-            formController.addField(YFField(name: "email", placeHolder: "Email"), inSection: i, withPercentageWidth: 1, withValidation: validation, showSelector: { () -> () in
-                self.formController.setText("defaultemail\(i + 1)@gmail.com", inFieldName: "email", inSection: i)
+            formController.addField(YFField(identifier: "email", placeHolder: "Email"), inSection: i, withPercentageWidth: 1, withValidation: validation, showSelector: { () -> () in
+                self.formController.setText("defaultemail\(i + 1)@gmail.com", inFieldWithIdentifier: "email", inSection: i)
             })
         }
         formController.setSectionTitles("Person")
@@ -57,7 +57,7 @@ class MainViewController: UIViewController, YFormDelegate {
     
     func formController(formController: YFormController, updatedField field: YFBasicField, atIndexPath indexPath: NSIndexPath) {
         let person = persons[indexPath.section]
-        switch field.name {
+        switch field.identifier {
         case "firstName":
             person.firstName = field.text
         case "lastName":

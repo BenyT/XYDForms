@@ -19,12 +19,12 @@ import UIKit
 
 class YFBasicField: NSObject {
     
-    private (set) var name: String = ""
+    private (set) var identifier: String = ""
     var text: String = ""
     
-    init(name: String, text: String) {
+    init(identifier: String, text: String) {
         super.init()
-        self.name = name
+        self.identifier = identifier
         self.text = text
     }
     
@@ -46,8 +46,8 @@ class YFField: YFBasicField {
         }
     }
     
-    init(name: String, placeHolder : String) {
-        super.init(name: name, text: "")
+    init(identifier: String, placeHolder : String) {
+        super.init(identifier: identifier, text: "")
         self.placeHolder = placeHolder
     }
     
