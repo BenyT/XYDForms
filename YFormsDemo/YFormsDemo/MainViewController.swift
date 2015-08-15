@@ -24,11 +24,11 @@ class MainViewController: UIViewController, YFormDelegate {
         // Validations Setup
         let emailRegex = "^([\\w-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([\\w-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$"
         let emailErrorMessage = "Email is not valid"
-        var emailValidation = YFRegexValidation(regex: emailRegex, errorMessage: emailErrorMessage)
-        var validation = YFValidation(isMandatoryWithErrorMessage: "Email is mandatory", regexValidations: [emailValidation])
-        var nameValidation = YFValidation(isMandatoryWithErrorMessage: "First name is mandatory", maxCharacters: 10)
-        var lastNameValidation = YFValidation(isMandatoryWithErrorMessage: "Last name is mandatory", maxCharacters: 10)
-        
+        let emailValidation = YFRegexValidation(regex: emailRegex, errorMessage: emailErrorMessage)
+        let validation = YFValidation(isMandatoryWithErrorMessage: "Email is mandatory", regexValidations: [emailValidation])
+        let nameValidation = YFValidation(isMandatoryWithErrorMessage: "First name is mandatory", maxCharacters: 10)
+        let lastNameValidation = YFValidation(isMandatoryWithErrorMessage: "Last name is mandatory", maxCharacters: 10)
+                
         // Fields setup
         persons = [Person(), Person()]
         formController = YFormController()

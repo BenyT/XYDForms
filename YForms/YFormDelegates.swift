@@ -30,7 +30,7 @@ class YFCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     class var headerIdentifier: String { get { return "YFFieldHeaderIdentifier" } }
     
     var sections: [YFSection] = []
-    var textFieldDelegate: YTextFieldDelegate!
+    var textFieldDelegate: YFTextFieldDelegate!
     var sectionTitles: [String]?
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -70,7 +70,7 @@ class YFCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     
 }
 
-class YTextFieldDelegate: NSObject, UITextFieldDelegate {
+class YFTextFieldDelegate: NSObject, UITextFieldDelegate {
     
     private var formController: YFormController!
     
@@ -81,7 +81,7 @@ class YTextFieldDelegate: NSObject, UITextFieldDelegate {
     
     // Tell YKeyboardHandler about the new active text field by sending a notification
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
-        NSNotificationCenter.defaultCenter().postNotificationName(YFormController.ActiveTextFieldUpdateNotification, object: textField)
+        NSNotificationCenter.defaultCenter().postNotificationName(YFKeyboardHandler.ActiveTextFieldUpdateNotification, object: textField)
         return true
     }
     
@@ -121,10 +121,12 @@ class YTextFieldDelegate: NSObject, UITextFieldDelegate {
     
 }
 
-class YKeyboardHandler: NSObject {
+class YFKeyboardHandler: NSObject {
     
     /* When the keyboard appears, a part of the collection view might get hidden. This delegate will add a bottom padding to the collection view, so it is visible and will scroll it if needed */
     
+    static let ActiveTextFieldUpdateNotification = "YActiveTextFieldUpdateNotification"
+
     private var formController: YFormController!
     private var keyboardFrame : CGRect?
     private var activeTextField: YTextField?
@@ -136,7 +138,7 @@ class YKeyboardHandler: NSObject {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardShown:", name: UIKeyboardDidShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardHidden:", name: UIKeyboardDidHideNotification, object: nil)
         // Subscribe to ActiveTextField listener from the YTextFieldDelegate
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "activeTextFieldUpdated:", name:YFormController.ActiveTextFieldUpdateNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "activeTextFieldUpdated:", name:YFKeyboardHandler.ActiveTextFieldUpdateNotification, object: nil)
     }
     
     deinit {

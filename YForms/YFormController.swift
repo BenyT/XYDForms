@@ -9,14 +9,12 @@
 import UIKit
 
 class YFormController: UIViewController {
-    
-    static let ActiveTextFieldUpdateNotification = "YActiveTextFieldUpdateNotification"
-    
+        
     var collectionView: UICollectionView!
     var collectionViewDataSource: YFCollectionViewDataSource?
     var collectionViewDelegate: YFCollectionViewDelegate?
     var delegate: YFormDelegate?
-    var keyboardHandler: YKeyboardHandler?
+    var keyboardHandler: YFKeyboardHandler?
 
     init(cellViewName: String = "YFFieldCell") {
         super.init(nibName: nil, bundle: nil)
@@ -35,8 +33,8 @@ class YFormController: UIViewController {
         collectionViewDelegate = YFCollectionViewDelegate(dataSource: collectionViewDataSource!)
         collectionView.dataSource = collectionViewDataSource
         collectionView.delegate = collectionViewDelegate
-        keyboardHandler = YKeyboardHandler(formController: self)
-        let textFieldDelegate = YTextFieldDelegate(formController: self)
+        keyboardHandler = YFKeyboardHandler(formController: self)
+        let textFieldDelegate = YFTextFieldDelegate(formController: self)
         collectionViewDataSource?.textFieldDelegate = textFieldDelegate
         
         self.view.addSubview(collectionView)
@@ -56,6 +54,19 @@ class YFormController: UIViewController {
         field.percentageWidth = percentageWidth
         field.validation = validation
         collectionViewDataSource?.addField(field, inSection: section)
+    }
+    
+    func setText(text: String, inFieldName fieldName: String, inSection section: Int = 0) {
+        if let fields = collectionViewDataSource?.sections[section].fields {
+            for (index, field) in enumerate(fields) {
+                if field.name == fieldName {
+                    // Update field with text
+                    field.text = text
+                    delegate?.formController(self, updatedField: field as YFBasicField, atIndexPath: NSIndexPath(forRow: index, inSection: section))
+                    break
+                }
+            }
+        }
     }
     
     // Section headers will only be displayed if you call this method
