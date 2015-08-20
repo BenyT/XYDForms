@@ -23,9 +23,8 @@ class MainViewController: UIViewController, YFormDelegate {
 
         // Validations Setup
         let emailRegex = "^([\\w-\\.]+)@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.)|(([\\w-]+\\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\\]?)$"
-        let emailErrorMessage = "Email is not valid"
-        let emailValidation = YFRegexValidation(regex: emailRegex, errorMessage: emailErrorMessage)
-        let validation = YFValidation(isMandatoryWithErrorMessage: "Email is mandatory", regexValidations: [emailValidation])
+        let emailRegexValidation = YFRegexValidation(regex: emailRegex, errorMessage: "Email is not valid")
+        let emailValidation = YFValidation(isMandatoryWithErrorMessage: "Email is mandatory", regexValidations: [emailRegexValidation])
         let nameValidation = YFValidation(isMandatoryWithErrorMessage: "First name is mandatory", maxCharacters: 10)
         let lastNameValidation = YFValidation(isMandatoryWithErrorMessage: "Last name is mandatory", maxCharacters: 10)
                 
@@ -37,7 +36,7 @@ class MainViewController: UIViewController, YFormDelegate {
             formController.addField(YFField(identifier: "firstName", placeHolder: "First Name"), inSection: i, withPercentageWidth: 0.5, withValidation: nameValidation)
             formController.addField(YFField(identifier: "lastName", placeHolder: "Last Name"), inSection: i, withPercentageWidth: 0.5, withValidation: lastNameValidation)
             // Using selectors
-            formController.addField(YFField(identifier: "email", placeHolder: "Email"), inSection: i, withPercentageWidth: 1, withValidation: validation, showSelector: { () -> () in
+            formController.addField(YFField(identifier: "email", placeHolder: "Email"), inSection: i, withPercentageWidth: 1, withValidation: emailValidation, showSelector: { () -> () in
                 self.formController.setText("defaultemail\(i + 1)@gmail.com", inFieldWithIdentifier: "email", inSection: i)
             })
         }
@@ -49,7 +48,7 @@ class MainViewController: UIViewController, YFormDelegate {
         formController.view!.setTranslatesAutoresizingMaskIntoConstraints(false)
         self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-(0)-[form]-(0)-|", options: NSLayoutFormatOptions.allZeros, metrics: nil, views: ["form": formController.view!]))
         self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-(70)-[form]-(80)-|", options: NSLayoutFormatOptions.allZeros, metrics: nil, views: ["form": formController.view!]))
-        
+                
         submitButton.layer.cornerRadius = 8
     }
     
