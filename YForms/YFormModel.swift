@@ -21,11 +21,13 @@ class YFBasicField: NSObject {
     
     private (set) var identifier: String = ""
     var text: String = ""
+    var type: YFFieldType = .Text
     
-    init(identifier: String, text: String) {
+    init(identifier: String, text: String, type: YFFieldType) {
         super.init()
         self.identifier = identifier
         self.text = text
+        self.type = type
     }
     
 }
@@ -46,8 +48,8 @@ class YFField: YFBasicField {
         }
     }
     
-    init(identifier: String, placeHolder : String) {
-        super.init(identifier: identifier, text: "")
+    init(identifier: String, placeHolder: String, type: YFFieldType = .Text) {
+        super.init(identifier: identifier, text: "", type: type)
         self.placeHolder = placeHolder
     }
     
@@ -94,7 +96,11 @@ struct YFRegexValidation {
 }
 
 enum YFCharacterValidation {
-    case None, OnlyLetters, OnlyDigits, OnlyLettersAndDigits
+    case None, OnlyLetters, OnlyLettersAndDigits
+}
+
+enum YFFieldType {
+    case Text, Numbers, Email, Date/*, Switch, Stepper*/
 }
 
 
