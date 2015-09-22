@@ -8,30 +8,7 @@
 
 import UIKit
 
-/* This file contains the following Structs:
-    - Basic Field
-    - Field
-    - Validation
-    - RegexValidation
-*/
-
-// MARK: Field
-
-class YFTextField: XYDField {
-    
-    var textField: FloatLabelTextField?
-    var errorMessage: String?
-
-    private (set) var placeHolder: String = ""
-
-    init(identifier: String, placeHolder: String) {
-        super.init(identifier: identifier, type: .Text)
-        self.placeHolder = placeHolder
-    }
-    
-}
-
-class XYFDateField: YFTextField {
+class XYFDateField: XYDTextField {
     
     var viewController: UIViewController!
     

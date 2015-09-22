@@ -32,7 +32,7 @@ class YFValidationUtilities: NSObject {
         var passedValidation = true
         for section in sections {
             for field in section.fields {
-                if let textField = field as? YFTextField, text = textField.value as? String, errorMessage = YFValidationUtilities.errorMessageForText(text, withValidation: textField.validation) {
+                if let textField = field as? XYDTextField, text = textField.value as? String, errorMessage = YFValidationUtilities.errorMessageForText(text, withValidation: textField.validation) {
                     textField.errorMessage = errorMessage
                     textField.textField?.errorMessage = errorMessage
                     passedValidation = false

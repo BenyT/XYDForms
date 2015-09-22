@@ -34,18 +34,18 @@ class MainViewController: UIViewController, YFormDelegate {
         formController.delegate = self
         for i in 0..<persons.count {
             
-            let firstNameField = YFTextField(identifier: "firstName", placeHolder: "First Name")
+            let firstNameField = XYDTextField(identifier: "firstName", placeHolder: "First Name")
             firstNameField.percentageWidth = 0.5
             firstNameField.validation = nameValidation
             formController.addField(firstNameField, inSection: i)
             
-            let lastNameField = YFTextField(identifier: "lastName", placeHolder: "Last Name")
+            let lastNameField = XYDTextField(identifier: "lastName", placeHolder: "Last Name")
             lastNameField.percentageWidth = 0.5
             lastNameField.validation = lastNameValidation
             formController.addField(lastNameField, inSection: i)
     
             // Using selectors
-            let emailField = YFTextField(identifier: "email", placeHolder: "email")
+            let emailField = XYDTextField(identifier: "email", placeHolder: "email")
             emailField.validation = emailValidation
             
             formController.addField(emailField, inSection: i, showSelector: { () -> () in

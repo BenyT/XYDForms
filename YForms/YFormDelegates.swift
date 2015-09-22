@@ -144,7 +144,7 @@ class YFCollectionViewDataSource: NSObject, UICollectionViewDataSource, TagWrite
         default:
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier(XYZCells.TextField, forIndexPath: indexPath) as? YFFieldCell
             // todo: RENAME TEXTFIELD
-            if let textField = field as? YFTextField {
+            if let textField = field as? XYDTextField {
                 textField.textField = cell?.textField
                 if let text = textField.value as? String {
                     println(text)
@@ -251,7 +251,7 @@ class YFTextFieldDelegate: NSObject, UITextFieldDelegate {
     // Apply text from textField in the correct Form Field. Show error message if needed. Call form's delegate if no error.
     func textFieldDidEndEditing(textField: UITextField) {
         if let textField = textField as? YTextField {
-            let field = formController.collectionViewDataSource!.sections[textField.indexPath.section].fields[textField.indexPath.row] as! YFTextField
+            let field = formController.collectionViewDataSource!.sections[textField.indexPath.section].fields[textField.indexPath.row] as! XYDTextField
             field.value = textField.text
             field.errorMessage = YFValidationUtilities.errorMessageForText(textField.text, withValidation: field.validation)
             (textField as! FloatLabelTextField).errorMessage = field.errorMessage
