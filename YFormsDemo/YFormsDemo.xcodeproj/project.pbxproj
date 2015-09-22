@@ -24,6 +24,7 @@
 		937797871BB2101000A1741C /* XYDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937797861BB2101000A1741C /* XYDTextField.swift */; };
 		937797891BB210A500A1741C /* XYDDateField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937797881BB210A500A1741C /* XYDDateField.swift */; };
 		9377978B1BB210C900A1741C /* XYDSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9377978A1BB210C900A1741C /* XYDSection.swift */; };
+		9377978D1BB2118800A1741C /* XYDValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9377978C1BB2118800A1741C /* XYDValidation.swift */; };
 		AC34230B1B7D327700D5A4AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC34230A1B7D327700D5A4AD /* AppDelegate.swift */; };
 		AC34230D1B7D327700D5A4AD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC34230C1B7D327700D5A4AD /* MainViewController.swift */; };
 		AC3423101B7D327700D5A4AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC34230E1B7D327700D5A4AD /* Main.storyboard */; };
@@ -70,6 +71,7 @@
 		937797861BB2101000A1741C /* XYDTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDTextField.swift; sourceTree = "<group>"; };
 		937797881BB210A500A1741C /* XYDDateField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDDateField.swift; sourceTree = "<group>"; };
 		9377978A1BB210C900A1741C /* XYDSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDSection.swift; sourceTree = "<group>"; };
+		9377978C1BB2118800A1741C /* XYDValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDValidation.swift; sourceTree = "<group>"; };
 		AC3423051B7D327700D5A4AD /* YFormsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YFormsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3423091B7D327700D5A4AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC34230A1B7D327700D5A4AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				937797861BB2101000A1741C /* XYDTextField.swift */,
 				937797881BB210A500A1741C /* XYDDateField.swift */,
 				9377978A1BB210C900A1741C /* XYDSection.swift */,
+				9377978C1BB2118800A1741C /* XYDValidation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				937797871BB2101000A1741C /* XYDTextField.swift in Sources */,
 				9377978B1BB210C900A1741C /* XYDSection.swift in Sources */,
 				937797671BB2058100A1741C /* TagWriteView.swift in Sources */,
+				9377978D1BB2118800A1741C /* XYDValidation.swift in Sources */,
 				9377977C1BB205B800A1741C /* XYZMultilineFieldCell.swift in Sources */,
 				AC3423981B7E80BD00D5A4AD /* YFormModel.swift in Sources */,
 				AC3423971B7E80BD00D5A4AD /* YFormDelegates.swift in Sources */,

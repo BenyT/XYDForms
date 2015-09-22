@@ -14,7 +14,7 @@ class XYDField: NSObject {
     var value: AnyObject?
     var type: YFFieldType = .Text
     
-    var validation: YFValidation?
+    var validation: XYDValidation?
     
     var percentageWidth: CGFloat = 1
     var heightMultiplier: CGFloat = 1

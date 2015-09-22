@@ -14,7 +14,7 @@ class YFValidationUtilities: NSObject {
     // todo: validation is done only for text
     // to check: faz sentido os fields terem o textField?
     
-    class func errorMessageForText(text: String, withValidation validation: YFValidation?) -> String? {
+    class func errorMessageForText(text: String, withValidation validation: XYDValidation?) -> String? {
         if let validation = validation {
             if validation.isMandatory && text == "" {
                 return validation.mandatoryErrorMessage
