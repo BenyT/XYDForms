@@ -11,12 +11,12 @@ import UIKit
 struct XYDValidation {
     
     var maxCharacters: Int = 0
-    var characterValidation: YFCharacterValidation = .None
+    var characterValidation: XYDCharacterValidation = .None
     var isMandatory: Bool = false
     var mandatoryErrorMessage: String?
     var regexValidations: [XYDRegexValidation]
     
-    init(characterValidation: YFCharacterValidation = .None, isMandatoryWithErrorMessage mandatoryErrorMessage: String = "", maxCharacters: Int = 0, regexValidations: [XYDRegexValidation] = []) {
+    init(characterValidation: XYDCharacterValidation = .None, isMandatoryWithErrorMessage mandatoryErrorMessage: String = "", maxCharacters: Int = 0, regexValidations: [XYDRegexValidation] = []) {
         self.characterValidation = characterValidation
         self.maxCharacters = maxCharacters
         if mandatoryErrorMessage != "" {

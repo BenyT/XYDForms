@@ -12,7 +12,7 @@ class XYDField: NSObject {
    
     private (set) var identifier: String = ""
     var value: AnyObject?
-    var type: YFFieldType = .Text
+    var type: XYDFieldType = .Text
     
     var validation: XYDValidation?
     
@@ -27,7 +27,7 @@ class XYDField: NSObject {
         }
     }
     
-    init(identifier: String, type: YFFieldType = .Text) {
+    init(identifier: String, type: XYDFieldType = .Text) {
         self.identifier = identifier
         self.type = type
     }
