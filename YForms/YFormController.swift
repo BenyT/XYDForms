@@ -116,7 +116,7 @@ class YFormController: UIViewController {
     }
     
     func validateFields() -> Bool {
-        return YFValidationUtilities.validateFields(collectionViewDataSource!.sections)
+        return XYDValidator.validateFields(collectionViewDataSource!.sections)
     }
     
 }

@@ -253,7 +253,7 @@ class YFTextFieldDelegate: NSObject, UITextFieldDelegate {
         if let textField = textField as? YTextField {
             let field = formController.collectionViewDataSource!.sections[textField.indexPath.section].fields[textField.indexPath.row] as! XYDTextField
             field.value = textField.text
-            field.errorMessage = YFValidationUtilities.errorMessageForText(textField.text, withValidation: field.validation)
+            field.errorMessage = XYDValidator.errorMessageForText(textField.text, withValidation: field.validation)
             (textField as! FloatLabelTextField).errorMessage = field.errorMessage
             if field.errorMessage == nil {
                 formController.delegate?.formController(formController, updatedField: field, atIndexPath: (field.identifier, textField.indexPath.section))

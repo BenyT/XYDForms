@@ -1,5 +1,5 @@
 //
-//  YFormUtilities.swift
+//  XYDValidator.swift
 //  YForms
 //
 //  Created by Mateus, Diogo on 12/08/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class YFValidationUtilities: NSObject {
+class XYDValidator: NSObject {
     
     
     // todo: validation is done only for text
@@ -32,7 +32,7 @@ class YFValidationUtilities: NSObject {
         var passedValidation = true
         for section in sections {
             for field in section.fields {
-                if let textField = field as? XYDTextField, text = textField.value as? String, errorMessage = YFValidationUtilities.errorMessageForText(text, withValidation: textField.validation) {
+                if let textField = field as? XYDTextField, text = textField.value as? String, errorMessage = XYDValidator.errorMessageForText(text, withValidation: textField.validation) {
                     textField.errorMessage = errorMessage
                     textField.textField?.errorMessage = errorMessage
                     passedValidation = false
