@@ -17,28 +17,16 @@ import UIKit
 
 // MARK: Field
 
-class YFBasicField: NSObject {
+class YFField: NSObject {
     
     private (set) var identifier: String = ""
-    var text: String = ""
+    var value: AnyObject?
     var type: YFFieldType = .Text
     
-    init(identifier: String, text: String, type: YFFieldType) {
-        super.init()
-        self.identifier = identifier
-        self.text = text
-        self.type = type
-    }
-    
-}
-
-class YFField: YFBasicField {
-    
-    private (set) var placeHolder: String = ""
     var validation: YFValidation?
-    var textField: FloatLabelTextField?
-    var errorMessage: String?
-    var percentageWidth: Double = 1
+
+    var percentageWidth: CGFloat = 1
+    var heightMultiplier: CGFloat = 1
     
     // Handle selectors
     private (set) var shouldShowSelector: Bool = false
@@ -48,9 +36,35 @@ class YFField: YFBasicField {
         }
     }
     
-    init(identifier: String, placeHolder: String, type: YFFieldType = .Text) {
-        super.init(identifier: identifier, text: "", type: type)
+    init(identifier: String, type: YFFieldType = .Text) {
+        self.identifier = identifier
+        self.type = type
+    }
+    
+}
+
+class YFTextField: YFField {
+    
+    var textField: FloatLabelTextField?
+    var errorMessage: String?
+
+    private (set) var placeHolder: String = ""
+
+    init(identifier: String, placeHolder: String) {
+        super.init(identifier: identifier, type: .Text)
         self.placeHolder = placeHolder
+    }
+    
+}
+
+class XYFDateField: YFTextField {
+    
+    var viewController: UIViewController!
+    
+    init(identifier: String, placeHolder: String, viewController: UIViewController) {
+        super.init(identifier: identifier, placeHolder: placeHolder)
+        self.type = .Date
+        self.viewController = viewController
     }
     
 }
@@ -100,7 +114,7 @@ enum YFCharacterValidation {
 }
 
 enum YFFieldType {
-    case Text, Numbers, Email, Date/*, Switch, Stepper*/
+    case Text, Numbers, Email, Date, Tags, Photo, Multiline, Switch/*, Stepper*/
 }
 
 
