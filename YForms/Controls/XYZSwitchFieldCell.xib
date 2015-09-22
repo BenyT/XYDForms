@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="XYZSwitchFieldCell" customModule="MealsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="52"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="340" height="52"/>
+                <subviews>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KZ2-er-zVu">
+                        <rect key="frame" x="275" y="10" width="51" height="31"/>
+                        <connections>
+                            <action selector="switchValueChanged:" destination="gTV-IL-0wX" eventType="valueChanged" id="Kp5-sw-BzA"/>
+                        </connections>
+                    </switch>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some question?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmG-8f-QUK">
+                        <rect key="frame" x="8" y="15.5" width="125.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="KZ2-er-zVu" secondAttribute="centerY" id="20V-3h-NHI"/>
+                <constraint firstAttribute="centerY" secondItem="FmG-8f-QUK" secondAttribute="centerY" id="8Nq-mv-ZSJ"/>
+                <constraint firstAttribute="trailing" secondItem="KZ2-er-zVu" secondAttribute="trailing" constant="16" id="DbQ-gt-aYn"/>
+                <constraint firstItem="FmG-8f-QUK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="IUe-OC-bjO"/>
+            </constraints>
+            <size key="customSize" width="340" height="52"/>
+            <connections>
+                <outlet property="switchControl" destination="KZ2-er-zVu" id="Nlo-3S-TUS"/>
+                <outlet property="titleLabel" destination="FmG-8f-QUK" id="nCB-3a-R1A"/>
+            </connections>
+            <point key="canvasLocation" x="209" y="268"/>
+        </collectionViewCell>
+    </objects>
+</document>
