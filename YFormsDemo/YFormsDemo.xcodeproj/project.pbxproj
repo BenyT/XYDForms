@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		937797671BB2058100A1741C /* TagWriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937797661BB2058100A1741C /* TagWriteView.swift */; };
+		9377976C1BB205AF00A1741C /* YFPhotoFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937797681BB205AF00A1741C /* YFPhotoFieldCell.swift */; };
+		9377976D1BB205AF00A1741C /* YFPhotoFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 937797691BB205AF00A1741C /* YFPhotoFieldCell.xib */; };
+		9377976E1BB205AF00A1741C /* YFTagFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9377976A1BB205AF00A1741C /* YFTagFieldCell.swift */; };
+		9377976F1BB205AF00A1741C /* YFTagFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9377976B1BB205AF00A1741C /* YFTagFieldCell.xib */; };
+		937797781BB205B800A1741C /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937797701BB205B800A1741C /* DatePickerViewController.swift */; };
+		937797791BB205B800A1741C /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 937797711BB205B800A1741C /* DatePickerViewController.xib */; };
+		9377977A1BB205B800A1741C /* XYZDateFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937797721BB205B800A1741C /* XYZDateFieldCell.swift */; };
+		9377977B1BB205B800A1741C /* XYZDateFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 937797731BB205B800A1741C /* XYZDateFieldCell.xib */; };
+		9377977C1BB205B800A1741C /* XYZMultilineFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937797741BB205B800A1741C /* XYZMultilineFieldCell.swift */; };
+		9377977D1BB205B800A1741C /* XYZMultilineFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 937797751BB205B800A1741C /* XYZMultilineFieldCell.xib */; };
+		9377977E1BB205B800A1741C /* XYZSwitchFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937797761BB205B800A1741C /* XYZSwitchFieldCell.swift */; };
+		9377977F1BB205B800A1741C /* XYZSwitchFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 937797771BB205B800A1741C /* XYZSwitchFieldCell.xib */; };
 		AC34230B1B7D327700D5A4AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC34230A1B7D327700D5A4AD /* AppDelegate.swift */; };
 		AC34230D1B7D327700D5A4AD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC34230C1B7D327700D5A4AD /* MainViewController.swift */; };
 		AC3423101B7D327700D5A4AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC34230E1B7D327700D5A4AD /* Main.storyboard */; };
@@ -36,6 +49,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		937797661BB2058100A1741C /* TagWriteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagWriteView.swift; sourceTree = "<group>"; };
+		937797681BB205AF00A1741C /* YFPhotoFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YFPhotoFieldCell.swift; sourceTree = "<group>"; };
+		937797691BB205AF00A1741C /* YFPhotoFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFPhotoFieldCell.xib; sourceTree = "<group>"; };
+		9377976A1BB205AF00A1741C /* YFTagFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YFTagFieldCell.swift; sourceTree = "<group>"; };
+		9377976B1BB205AF00A1741C /* YFTagFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YFTagFieldCell.xib; sourceTree = "<group>"; };
+		937797701BB205B800A1741C /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		937797711BB205B800A1741C /* DatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
+		937797721BB205B800A1741C /* XYZDateFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYZDateFieldCell.swift; sourceTree = "<group>"; };
+		937797731BB205B800A1741C /* XYZDateFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYZDateFieldCell.xib; sourceTree = "<group>"; };
+		937797741BB205B800A1741C /* XYZMultilineFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYZMultilineFieldCell.swift; sourceTree = "<group>"; };
+		937797751BB205B800A1741C /* XYZMultilineFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYZMultilineFieldCell.xib; sourceTree = "<group>"; };
+		937797761BB205B800A1741C /* XYZSwitchFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYZSwitchFieldCell.swift; sourceTree = "<group>"; };
+		937797771BB205B800A1741C /* XYZSwitchFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYZSwitchFieldCell.xib; sourceTree = "<group>"; };
 		AC3423051B7D327700D5A4AD /* YFormsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YFormsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3423091B7D327700D5A4AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC34230A1B7D327700D5A4AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +176,18 @@
 		AC3423841B7E80BD00D5A4AD /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				937797701BB205B800A1741C /* DatePickerViewController.swift */,
+				937797711BB205B800A1741C /* DatePickerViewController.xib */,
+				937797721BB205B800A1741C /* XYZDateFieldCell.swift */,
+				937797731BB205B800A1741C /* XYZDateFieldCell.xib */,
+				937797741BB205B800A1741C /* XYZMultilineFieldCell.swift */,
+				937797751BB205B800A1741C /* XYZMultilineFieldCell.xib */,
+				937797761BB205B800A1741C /* XYZSwitchFieldCell.swift */,
+				937797771BB205B800A1741C /* XYZSwitchFieldCell.xib */,
+				937797681BB205AF00A1741C /* YFPhotoFieldCell.swift */,
+				937797691BB205AF00A1741C /* YFPhotoFieldCell.xib */,
+				9377976A1BB205AF00A1741C /* YFTagFieldCell.swift */,
+				9377976B1BB205AF00A1741C /* YFTagFieldCell.xib */,
 				AC3423851B7E80BD00D5A4AD /* YFFieldCell.swift */,
 				AC3423861B7E80BD00D5A4AD /* YFFieldCell.xib */,
 				AC3423871B7E80BD00D5A4AD /* YFFieldHeader.swift */,
@@ -161,6 +199,7 @@
 		AC3423891B7E80BD00D5A4AD /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				937797661BB2058100A1741C /* TagWriteView.swift */,
 				AC34238A1B7E80BD00D5A4AD /* FloatLabelTextField.swift */,
 				AC34238B1B7E80BD00D5A4AD /* Regex.swift */,
 			);
@@ -247,10 +286,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				937797791BB205B800A1741C /* DatePickerViewController.xib in Resources */,
 				AC3423101B7D327700D5A4AD /* Main.storyboard in Resources */,
+				9377977B1BB205B800A1741C /* XYZDateFieldCell.xib in Resources */,
 				AC3423151B7D327700D5A4AD /* LaunchScreen.xib in Resources */,
+				9377976F1BB205AF00A1741C /* YFTagFieldCell.xib in Resources */,
+				9377976D1BB205AF00A1741C /* YFPhotoFieldCell.xib in Resources */,
+				9377977D1BB205B800A1741C /* XYZMultilineFieldCell.xib in Resources */,
 				AC3423121B7D327700D5A4AD /* Images.xcassets in Resources */,
 				AC3423911B7E80BD00D5A4AD /* YFFieldCell.xib in Resources */,
+				9377977F1BB205B800A1741C /* XYZSwitchFieldCell.xib in Resources */,
 				AC3423931B7E80BD00D5A4AD /* YFFieldHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,9 +314,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9377977E1BB205B800A1741C /* XYZSwitchFieldCell.swift in Sources */,
 				AC3423991B7E80BD00D5A4AD /* YFormUtilities.swift in Sources */,
+				9377976E1BB205AF00A1741C /* YFTagFieldCell.swift in Sources */,
+				937797781BB205B800A1741C /* DatePickerViewController.swift in Sources */,
 				AC3423901B7E80BD00D5A4AD /* YFFieldCell.swift in Sources */,
+				9377976C1BB205AF00A1741C /* YFPhotoFieldCell.swift in Sources */,
 				AC34230D1B7D327700D5A4AD /* MainViewController.swift in Sources */,
+				9377977A1BB205B800A1741C /* XYZDateFieldCell.swift in Sources */,
+				937797671BB2058100A1741C /* TagWriteView.swift in Sources */,
+				9377977C1BB205B800A1741C /* XYZMultilineFieldCell.swift in Sources */,
 				AC3423981B7E80BD00D5A4AD /* YFormModel.swift in Sources */,
 				AC3423971B7E80BD00D5A4AD /* YFormDelegates.swift in Sources */,
 				AC3423921B7E80BD00D5A4AD /* YFFieldHeader.swift in Sources */,

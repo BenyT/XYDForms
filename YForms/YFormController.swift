@@ -26,8 +26,9 @@ class YFormController: UIViewController {
     init() {
         super.init(nibName: nil, bundle: nil)
         // CollectionView Setup
-        let layout = XYFCollectionViewFlowLayout()
-        layout.formController = self
+        let layout = UICollectionViewFlowLayout()
+//        let layout = XYFCollectionViewFlowLayout()
+//        layout.formController = self
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: layout)
@@ -46,7 +47,7 @@ class YFormController: UIViewController {
         collectionViewDataSource = YFCollectionViewDataSource(formController: self)
         collectionViewDelegate = YFCollectionViewDelegate(formController: self)
         collectionView.dataSource = collectionViewDataSource
-//        collectionView.delegate = collectionViewDelegate
+        collectionView.delegate = collectionViewDelegate
         keyboardHandler = YFKeyboardHandler(formController: self)
         let textFieldDelegate = YFTextFieldDelegate(formController: self)
         collectionViewDataSource?.textFieldDelegate = textFieldDelegate
@@ -64,15 +65,14 @@ class YFormController: UIViewController {
     
     // MARK: Public Methods
     
-    func addField(field: YFField, inSection section: Int = 0, withPercentageWidth percentageWidth: Double = 1, withValidation validation: YFValidation? = nil, andHeightMultiplier heightMultiplier: CGFloat = 1) {
-        field.validation = validation
+    func addField(field: YFField, inSection section: Int = 0) {
         collectionViewDataSource?.addField(field, inSection: section)
     }
     
     // Add a field with a selector
-    func addField(field: YFField, inSection section: Int = 0, withPercentageWidth percentageWidth: Double = 1, withValidation validation: YFValidation? = nil, showSelector: () -> ()) {
+    func addField(field: YFField, inSection section: Int = 0, showSelector: () -> ()) {
         field.showSelector = showSelector
-        addField(field, inSection: section, withPercentageWidth: percentageWidth, withValidation: validation)
+        collectionViewDataSource?.addField(field, inSection: section)
     }
     
     /* Updates the field with 'fieldIdentifier' with 'text'

@@ -33,10 +33,23 @@ class MainViewController: UIViewController, YFormDelegate {
         formController = YFormController()
         formController.delegate = self
         for i in 0..<persons.count {
-            formController.addField(YFField(identifier: "firstName", placeHolder: "First Name"), inSection: i, withPercentageWidth: 0.5, withValidation: nameValidation)
-            formController.addField(YFField(identifier: "lastName", placeHolder: "Last Name"), inSection: i, withPercentageWidth: 0.5, withValidation: lastNameValidation)
+            
+            let firstNameField = YFTextField(identifier: "firstName", placeHolder: "First Name")
+            firstNameField.percentageWidth = 0.5
+            firstNameField.validation = nameValidation
+            formController.addField(firstNameField, inSection: i)
+            
+            let lastNameField = YFTextField(identifier: "lastName", placeHolder: "Last Name")
+            lastNameField.percentageWidth = 0.5
+            lastNameField.validation = lastNameValidation
+            formController.addField(lastNameField, inSection: i)
+    
             // Using selectors
-            formController.addField(YFField(identifier: "email", placeHolder: "Email"), inSection: i, withPercentageWidth: 1, withValidation: emailValidation, showSelector: { () -> () in
+            // todo: fix selectors
+            let emailField = YFTextField(identifier: "email", placeHolder: "email")
+            emailField.validation = emailValidation
+            
+            formController.addField(emailField, inSection: i, showSelector: { () -> () in
                 self.formController.setText("defaultemail\(i + 1)@gmail.com", inFieldWithIdentifier: "email", inSection: i)
             })
         }
@@ -54,13 +67,13 @@ class MainViewController: UIViewController, YFormDelegate {
     
     // MARK: YFormDelegate
     
-    func formController(formController: YFormController, updatedField field: YFBasicField, atIndexPath indexPath: NSIndexPath) {
-        let person = persons[indexPath.section]
+    func formController(formController: YFormController, updatedField field: YFField, atIndexPath indexPath: XYZIndexPath) {
+        let person = persons[indexPath.1]
         switch field.identifier {
         case "firstName":
-            person.firstName = field.text
+            person.firstName = field.value as! String
         case "lastName":
-            person.lastName = field.text
+            person.lastName = field.value as! String
         default:
             break
         }
