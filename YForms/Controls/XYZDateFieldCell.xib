@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="XYZDateFieldCell" customModule="MealsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="309" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="309" height="50"/>
+                <subviews>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Placeholder" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cHX-ks-04j" customClass="FloatLabelTextField" customModule="MealsApp" customModuleProvider="target">
+                        <rect key="frame" x="16" y="7.5" width="277" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="Hj4-f3-OH5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderYPadding">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="titleLabelYPadding">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </textField>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="cHX-ks-04j" secondAttribute="centerY" id="3ZI-Pg-cKa"/>
+                <constraint firstItem="cHX-ks-04j" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="Q0A-zx-FYu"/>
+                <constraint firstAttribute="trailing" secondItem="cHX-ks-04j" secondAttribute="trailing" constant="16" id="wRh-Na-nym"/>
+            </constraints>
+            <size key="customSize" width="309" height="50"/>
+            <connections>
+                <outlet property="textField" destination="cHX-ks-04j" id="frW-ya-wIU"/>
+            </connections>
+            <point key="canvasLocation" x="258.5" y="236"/>
+        </collectionViewCell>
+    </objects>
+</document>
