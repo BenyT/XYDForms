@@ -23,23 +23,30 @@ class YFormController: UIViewController {
         }
     }
 
-    init(cellViewName: String = "YFFieldCell") {
+    init() {
         super.init(nibName: nil, bundle: nil)
         // CollectionView Setup
-        let layout = UICollectionViewFlowLayout()
+        let layout = XYFCollectionViewFlowLayout()
+        layout.formController = self
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         collectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: layout)
         collectionView.backgroundColor = UIColor.clearColor()
         // You can set a custom cell view
-        collectionView.registerNib(UINib(nibName: cellViewName, bundle: nil), forCellWithReuseIdentifier: YFCollectionViewDataSource.cellIdentifier)
-        collectionView.registerNib(UINib(nibName: "YFFieldHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: YFCollectionViewDataSource.headerIdentifier)
+        collectionView.registerNib(UINib(nibName: XYZCells.TextField, bundle: nil), forCellWithReuseIdentifier: XYZCells.TextField)
+        collectionView.registerNib(UINib(nibName: XYZCells.Header, bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: XYZCells.Header)
+        collectionView.registerNib(UINib(nibName: XYZCells.TagField, bundle: nil), forCellWithReuseIdentifier: XYZCells.TagField)
+        collectionView.registerNib(UINib(nibName: XYZCells.PhotoField, bundle: nil), forCellWithReuseIdentifier: XYZCells.PhotoField)
+        collectionView.registerNib(UINib(nibName: XYZCells.MultilineField, bundle: nil), forCellWithReuseIdentifier: XYZCells.MultilineField)
+        collectionView.registerNib(UINib(nibName: XYZCells.MultilineField, bundle: nil), forCellWithReuseIdentifier: XYZCells.MultilineField)
+        collectionView.registerNib(UINib(nibName: XYZCells.SwitchField, bundle: nil), forCellWithReuseIdentifier: XYZCells.SwitchField)
+        collectionView.registerNib(UINib(nibName: XYZCells.DateField, bundle: nil), forCellWithReuseIdentifier: XYZCells.DateField)
         
         // Delegates Setup
-        collectionViewDataSource = YFCollectionViewDataSource()
+        collectionViewDataSource = YFCollectionViewDataSource(formController: self)
         collectionViewDelegate = YFCollectionViewDelegate(formController: self)
         collectionView.dataSource = collectionViewDataSource
-        collectionView.delegate = collectionViewDelegate
+//        collectionView.delegate = collectionViewDelegate
         keyboardHandler = YFKeyboardHandler(formController: self)
         let textFieldDelegate = YFTextFieldDelegate(formController: self)
         collectionViewDataSource?.textFieldDelegate = textFieldDelegate
@@ -57,8 +64,7 @@ class YFormController: UIViewController {
     
     // MARK: Public Methods
     
-    func addField(field: YFField, inSection section: Int = 0, withPercentageWidth percentageWidth: Double = 1, withValidation validation: YFValidation? = nil) {
-        field.percentageWidth = percentageWidth
+    func addField(field: YFField, inSection section: Int = 0, withPercentageWidth percentageWidth: Double = 1, withValidation validation: YFValidation? = nil, andHeightMultiplier heightMultiplier: CGFloat = 1) {
         field.validation = validation
         collectionViewDataSource?.addField(field, inSection: section)
     }
@@ -79,9 +85,9 @@ class YFormController: UIViewController {
             for (index, field) in enumerate(fields) {
                 if field.identifier == fieldIdentifier {
                     // Update field with text
-                    field.text = text
+                    field.value = text
                     let indexPath = NSIndexPath(forRow: index, inSection: section)
-                    delegate?.formController(self, updatedField: field as YFBasicField, atIndexPath: indexPath)
+                    delegate?.formController(self, updatedField: field, atIndexPath: (field.identifier, indexPath.section))
                     collectionView.reloadItemsAtIndexPaths([indexPath])
                     break
                 }
@@ -116,7 +122,7 @@ class YFormController: UIViewController {
 }
 
 protocol YFormDelegate {
-    func formController(formController: YFormController, updatedField field: YFBasicField, atIndexPath indexPath: NSIndexPath)
+    func formController(formController: YFormController, updatedField field: YFField, atIndexPath indexPath: XYZIndexPath)
 }
 
 // TODO: Move to another File
