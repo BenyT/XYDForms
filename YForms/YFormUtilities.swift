@@ -28,7 +28,7 @@ class YFValidationUtilities: NSObject {
         return nil
     }
     
-    class func validateFields(sections: [YFSection]) -> Bool {
+    class func validateFields(sections: [XYDSection]) -> Bool {
         var passedValidation = true
         for section in sections {
             for field in section.fields {

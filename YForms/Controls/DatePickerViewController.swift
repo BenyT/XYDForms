@@ -13,7 +13,7 @@ class DatePickerViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
-    var field: XYFDateField!
+    var field: XYDDateField!
     var delegate: XYFDatePickerViewControllerDelegate?
     
     override var nibName: String {
@@ -37,5 +37,5 @@ class DatePickerViewController: UIViewController {
 }
 
 protocol XYFDatePickerViewControllerDelegate {
-    func datePickerViewController(field: XYFDateField, date: NSDate)
+    func datePickerViewController(field: XYDDateField, date: NSDate)
 }

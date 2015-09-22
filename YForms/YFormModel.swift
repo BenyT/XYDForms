@@ -8,24 +8,6 @@
 
 import UIKit
 
-class XYFDateField: XYDTextField {
-    
-    var viewController: UIViewController!
-    
-    init(identifier: String, placeHolder: String, viewController: UIViewController) {
-        super.init(identifier: identifier, placeHolder: placeHolder)
-        self.type = .Date
-        self.viewController = viewController
-    }
-    
-}
-
-struct YFSection {
-    
-    var fields: [XYDField] = []
-    
-}
-
 // MARK: Validation
 
 struct YFValidation {

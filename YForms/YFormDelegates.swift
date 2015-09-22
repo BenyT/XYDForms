@@ -104,7 +104,7 @@ class YFCollectionViewDelegate: NSObject, UICollectionViewDelegate {
 
 class YFCollectionViewDataSource: NSObject, UICollectionViewDataSource, TagWriteViewDelegate, YFPhotoFieldCellDelegate, XYZSwitchFieldCellDelegate, XYFDatePickerViewControllerDelegate {
     
-    var sections: [YFSection] = []
+    var sections: [XYDSection] = []
     var textFieldDelegate: YFTextFieldDelegate!
     var sectionTitles: [String]?
     
@@ -181,7 +181,7 @@ class YFCollectionViewDataSource: NSObject, UICollectionViewDataSource, TagWrite
     func addField(newField: XYDField, inSection section: Int) {
         if sections.count <= section {
             // Create new section
-            sections.insert(YFSection(), atIndex: section)
+            sections.insert(XYDSection(), atIndex: section)
         }
         sections[section].fields.append(newField)
     }
@@ -211,7 +211,7 @@ class YFCollectionViewDataSource: NSObject, UICollectionViewDataSource, TagWrite
         formController.delegate?.formController(formController, updatedField: field, atIndexPath: (field.identifier, switchFieldCell.indexPath.section))
     }
     
-    func datePickerViewController(field: XYFDateField, date: NSDate) {
+    func datePickerViewController(field: XYDDateField, date: NSDate) {
         field.value = date
         formController.delegate?.formController(formController, updatedField: field, atIndexPath: (field.identifier, 0))
         // todo: fill text field
@@ -231,7 +231,7 @@ class YFTextFieldDelegate: NSObject, UITextFieldDelegate {
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
         if let textField = textField as? YTextField {
             let field = formController.collectionViewDataSource!.sections[textField.indexPath.section].fields[textField.indexPath.row]
-            if let dateField = field as? XYFDateField {
+            if let dateField = field as? XYDDateField {
                 let datePickerViewController = DatePickerViewController()
                 datePickerViewController.field = dateField
                 datePickerViewController.delegate = formController.collectionViewDataSource
