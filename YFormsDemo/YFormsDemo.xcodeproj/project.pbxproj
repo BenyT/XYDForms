@@ -42,7 +42,7 @@
 		AC3423951B7E80BD00D5A4AD /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC34238B1B7E80BD00D5A4AD /* Regex.swift */; };
 		AC3423961B7E80BD00D5A4AD /* YFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC34238C1B7E80BD00D5A4AD /* YFormController.swift */; };
 		AC3423971B7E80BD00D5A4AD /* YFormDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC34238D1B7E80BD00D5A4AD /* YFormDelegates.swift */; };
-		AC3423991B7E80BD00D5A4AD /* YFormUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC34238F1B7E80BD00D5A4AD /* YFormUtilities.swift */; };
+		AC3423991B7E80BD00D5A4AD /* XYDValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC34238F1B7E80BD00D5A4AD /* XYDValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +95,7 @@
 		AC34238B1B7E80BD00D5A4AD /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
 		AC34238C1B7E80BD00D5A4AD /* YFormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YFormController.swift; sourceTree = "<group>"; };
 		AC34238D1B7E80BD00D5A4AD /* YFormDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YFormDelegates.swift; sourceTree = "<group>"; };
-		AC34238F1B7E80BD00D5A4AD /* YFormUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YFormUtilities.swift; sourceTree = "<group>"; };
+		AC34238F1B7E80BD00D5A4AD /* XYDValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,7 +204,7 @@
 				AC3423891B7E80BD00D5A4AD /* Dependencies */,
 				AC34238C1B7E80BD00D5A4AD /* YFormController.swift */,
 				AC34238D1B7E80BD00D5A4AD /* YFormDelegates.swift */,
-				AC34238F1B7E80BD00D5A4AD /* YFormUtilities.swift */,
+				AC34238F1B7E80BD00D5A4AD /* XYDValidator.swift */,
 			);
 			name = YForms;
 			path = ../../YForms;
@@ -352,7 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9377977E1BB205B800A1741C /* XYZSwitchFieldCell.swift in Sources */,
-				AC3423991B7E80BD00D5A4AD /* YFormUtilities.swift in Sources */,
+				AC3423991B7E80BD00D5A4AD /* XYDValidator.swift in Sources */,
 				9377976E1BB205AF00A1741C /* YFTagFieldCell.swift in Sources */,
 				937797781BB205B800A1741C /* DatePickerViewController.swift in Sources */,
 				937797921BB2129F00A1741C /* XYDCharacterValidation.swift in Sources */,
