@@ -49,7 +49,7 @@ class YFormController: UIViewController {
         collectionView.dataSource = collectionViewDataSource
         collectionView.delegate = collectionViewDelegate
         keyboardHandler = YFKeyboardHandler(formController: self)
-        let textFieldDelegate = YFTextFieldDelegate(formController: self)
+        let textFieldDelegate = XYDTextFieldDelegate(formController: self)
         collectionViewDataSource?.textFieldDelegate = textFieldDelegate
         
         self.view.addSubview(collectionView)
