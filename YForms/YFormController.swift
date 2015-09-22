@@ -11,10 +11,10 @@ import UIKit
 class YFormController: UIViewController {
     
     var collectionView: UICollectionView!
-    var collectionViewDataSource: YFCollectionViewDataSource?
-    var collectionViewDelegate: YFCollectionViewDelegate?
+    var collectionViewDataSource: XYDCollectionViewDataSource?
+    var collectionViewDelegate: XYDCollectionViewDelegate?
     var delegate: YFormDelegate?
-    var keyboardHandler: YFKeyboardHandler?
+    var keyboardHandler: XYDKeyboardHandler?
     
     var fieldHeight: CGFloat = 50
     var cornerRadius: CGFloat = 0 {
@@ -27,7 +27,7 @@ class YFormController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         // CollectionView Setup
         let layout = UICollectionViewFlowLayout()
-//        let layout = XYFCollectionViewFlowLayout()
+//        let layout = XYDCollectionViewFlowLayout()
 //        layout.formController = self
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
@@ -44,11 +44,11 @@ class YFormController: UIViewController {
         collectionView.registerNib(UINib(nibName: XYZCells.DateField, bundle: nil), forCellWithReuseIdentifier: XYZCells.DateField)
         
         // Delegates Setup
-        collectionViewDataSource = YFCollectionViewDataSource(formController: self)
-        collectionViewDelegate = YFCollectionViewDelegate(formController: self)
+        collectionViewDataSource = XYDCollectionViewDataSource(formController: self)
+        collectionViewDelegate = XYDCollectionViewDelegate(formController: self)
         collectionView.dataSource = collectionViewDataSource
         collectionView.delegate = collectionViewDelegate
-        keyboardHandler = YFKeyboardHandler(formController: self)
+        keyboardHandler = XYDKeyboardHandler(formController: self)
         let textFieldDelegate = XYDTextFieldDelegate(formController: self)
         collectionViewDataSource?.textFieldDelegate = textFieldDelegate
         

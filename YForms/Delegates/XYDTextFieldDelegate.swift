@@ -31,7 +31,7 @@ class XYDTextFieldDelegate: NSObject, UITextFieldDelegate {
                 return false
             } else {
                 // Tell KeyboardHandler about the new active text field by sending a notification
-                NSNotificationCenter.defaultCenter().postNotificationName(YFKeyboardHandler.ActiveTextFieldUpdateNotification, object: textField)
+                NSNotificationCenter.defaultCenter().postNotificationName(XYDKeyboardHandler.ActiveTextFieldUpdateNotification, object: textField)
             }
         }
         return true

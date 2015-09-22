@@ -29,6 +29,11 @@
 		937797921BB2129F00A1741C /* XYDCharacterValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937797911BB2129F00A1741C /* XYDCharacterValidation.swift */; };
 		937797941BB2130B00A1741C /* XYDFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937797931BB2130B00A1741C /* XYDFieldType.swift */; };
 		937797971BB214BB00A1741C /* XYDTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937797961BB214BB00A1741C /* XYDTextFieldDelegate.swift */; };
+		937797991BB215A500A1741C /* XYDCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937797981BB215A500A1741C /* XYDCollectionViewDataSource.swift */; };
+		9377979B1BB2165100A1741C /* XYDCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9377979A1BB2165100A1741C /* XYDCollectionViewFlowLayout.swift */; };
+		9377979D1BB2167A00A1741C /* XYDCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9377979C1BB2167A00A1741C /* XYDCollectionViewDelegate.swift */; };
+		9377979F1BB216C900A1741C /* XYDKeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9377979E1BB216C900A1741C /* XYDKeyboardHandler.swift */; };
+		937797A11BB2174C00A1741C /* XYDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937797A01BB2174C00A1741C /* XYDConstants.swift */; };
 		AC34230B1B7D327700D5A4AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC34230A1B7D327700D5A4AD /* AppDelegate.swift */; };
 		AC34230D1B7D327700D5A4AD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC34230C1B7D327700D5A4AD /* MainViewController.swift */; };
 		AC3423101B7D327700D5A4AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC34230E1B7D327700D5A4AD /* Main.storyboard */; };
@@ -79,6 +84,11 @@
 		937797911BB2129F00A1741C /* XYDCharacterValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDCharacterValidation.swift; sourceTree = "<group>"; };
 		937797931BB2130B00A1741C /* XYDFieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDFieldType.swift; sourceTree = "<group>"; };
 		937797961BB214BB00A1741C /* XYDTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDTextFieldDelegate.swift; sourceTree = "<group>"; };
+		937797981BB215A500A1741C /* XYDCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		9377979A1BB2165100A1741C /* XYDCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		9377979C1BB2167A00A1741C /* XYDCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		9377979E1BB216C900A1741C /* XYDKeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDKeyboardHandler.swift; sourceTree = "<group>"; };
+		937797A01BB2174C00A1741C /* XYDConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDConstants.swift; sourceTree = "<group>"; };
 		AC3423051B7D327700D5A4AD /* YFormsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YFormsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3423091B7D327700D5A4AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC34230A1B7D327700D5A4AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +155,10 @@
 			isa = PBXGroup;
 			children = (
 				937797961BB214BB00A1741C /* XYDTextFieldDelegate.swift */,
+				937797981BB215A500A1741C /* XYDCollectionViewDataSource.swift */,
+				9377979A1BB2165100A1741C /* XYDCollectionViewFlowLayout.swift */,
+				9377979C1BB2167A00A1741C /* XYDCollectionViewDelegate.swift */,
+				9377979E1BB216C900A1741C /* XYDKeyboardHandler.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -216,6 +230,7 @@
 				AC34238C1B7E80BD00D5A4AD /* YFormController.swift */,
 				AC34238D1B7E80BD00D5A4AD /* YFormDelegates.swift */,
 				AC34238F1B7E80BD00D5A4AD /* XYDValidator.swift */,
+				937797A01BB2174C00A1741C /* XYDConstants.swift */,
 			);
 			name = YForms;
 			path = ../../YForms;
@@ -363,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9377977E1BB205B800A1741C /* XYZSwitchFieldCell.swift in Sources */,
+				9377979F1BB216C900A1741C /* XYDKeyboardHandler.swift in Sources */,
 				AC3423991B7E80BD00D5A4AD /* XYDValidator.swift in Sources */,
 				9377976E1BB205AF00A1741C /* YFTagFieldCell.swift in Sources */,
 				937797781BB205B800A1741C /* DatePickerViewController.swift in Sources */,
@@ -371,12 +387,16 @@
 				9377976C1BB205AF00A1741C /* YFPhotoFieldCell.swift in Sources */,
 				937797971BB214BB00A1741C /* XYDTextFieldDelegate.swift in Sources */,
 				AC34230D1B7D327700D5A4AD /* MainViewController.swift in Sources */,
+				937797991BB215A500A1741C /* XYDCollectionViewDataSource.swift in Sources */,
+				9377979B1BB2165100A1741C /* XYDCollectionViewFlowLayout.swift in Sources */,
 				9377977A1BB205B800A1741C /* XYZDateFieldCell.swift in Sources */,
+				937797A11BB2174C00A1741C /* XYDConstants.swift in Sources */,
 				937797891BB210A500A1741C /* XYDDateField.swift in Sources */,
 				937797871BB2101000A1741C /* XYDTextField.swift in Sources */,
 				9377978B1BB210C900A1741C /* XYDSection.swift in Sources */,
 				937797671BB2058100A1741C /* TagWriteView.swift in Sources */,
 				9377978D1BB2118800A1741C /* XYDValidation.swift in Sources */,
+				9377979D1BB2167A00A1741C /* XYDCollectionViewDelegate.swift in Sources */,
 				937797941BB2130B00A1741C /* XYDFieldType.swift in Sources */,
 				9377977C1BB205B800A1741C /* XYZMultilineFieldCell.swift in Sources */,
 				AC3423971B7E80BD00D5A4AD /* YFormDelegates.swift in Sources */,
