@@ -14,9 +14,9 @@ struct XYDValidation {
     var characterValidation: YFCharacterValidation = .None
     var isMandatory: Bool = false
     var mandatoryErrorMessage: String?
-    var regexValidations: [YFRegexValidation]
+    var regexValidations: [XYDRegexValidation]
     
-    init(characterValidation: YFCharacterValidation = .None, isMandatoryWithErrorMessage mandatoryErrorMessage: String = "", maxCharacters: Int = 0, regexValidations: [YFRegexValidation] = []) {
+    init(characterValidation: YFCharacterValidation = .None, isMandatoryWithErrorMessage mandatoryErrorMessage: String = "", maxCharacters: Int = 0, regexValidations: [XYDRegexValidation] = []) {
         self.characterValidation = characterValidation
         self.maxCharacters = maxCharacters
         if mandatoryErrorMessage != "" {
