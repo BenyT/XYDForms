@@ -10,6 +10,10 @@ import UIKit
 
 class YFValidationUtilities: NSObject {
     
+    
+    // todo: validation is done only for text
+    // to check: faz sentido os fields terem o textField?
+    
     class func errorMessageForText(text: String, withValidation validation: YFValidation?) -> String? {
         if let validation = validation {
             if validation.isMandatory && text == "" {
@@ -28,9 +32,9 @@ class YFValidationUtilities: NSObject {
         var passedValidation = true
         for section in sections {
             for field in section.fields {
-                if let errorMessage = YFValidationUtilities.errorMessageForText(field.text, withValidation: field.validation) {
-                    field.errorMessage = errorMessage
-                    field.textField?.errorMessage = errorMessage
+                if let textField = field as? YFTextField, text = textField.value as? String, errorMessage = YFValidationUtilities.errorMessageForText(text, withValidation: textField.validation) {
+                    textField.errorMessage = errorMessage
+                    textField.textField?.errorMessage = errorMessage
                     passedValidation = false
                 }
             }
