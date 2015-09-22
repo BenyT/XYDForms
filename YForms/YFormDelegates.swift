@@ -147,7 +147,10 @@ class YFCollectionViewDataSource: NSObject, UICollectionViewDataSource, TagWrite
             if let textField = field as? YFTextField {
                 textField.textField = cell?.textField
                 if let text = textField.value as? String {
+                    println(text)
                     cell?.textField.text = text
+                } else {
+                    cell?.textField.text = ""
                 }
                 cell?.textField.placeholder = textField.placeHolder
                 cell?.textField.delegate = textFieldDelegate
@@ -175,7 +178,7 @@ class YFCollectionViewDataSource: NSObject, UICollectionViewDataSource, TagWrite
         return headerView
     }
     
-    func addField(newField: YFField, inSection section: Int) {
+    func addField(newField: XYDField, inSection section: Int) {
         if sections.count <= section {
             // Create new section
             sections.insert(YFSection(), atIndex: section)

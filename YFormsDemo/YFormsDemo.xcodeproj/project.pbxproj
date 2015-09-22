@@ -20,6 +20,7 @@
 		9377977D1BB205B800A1741C /* XYZMultilineFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 937797751BB205B800A1741C /* XYZMultilineFieldCell.xib */; };
 		9377977E1BB205B800A1741C /* XYZSwitchFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937797761BB205B800A1741C /* XYZSwitchFieldCell.swift */; };
 		9377977F1BB205B800A1741C /* XYZSwitchFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 937797771BB205B800A1741C /* XYZSwitchFieldCell.xib */; };
+		937797851BB20C3B00A1741C /* XYDField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937797841BB20C3B00A1741C /* XYDField.swift */; };
 		AC34230B1B7D327700D5A4AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC34230A1B7D327700D5A4AD /* AppDelegate.swift */; };
 		AC34230D1B7D327700D5A4AD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC34230C1B7D327700D5A4AD /* MainViewController.swift */; };
 		AC3423101B7D327700D5A4AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC34230E1B7D327700D5A4AD /* Main.storyboard */; };
@@ -62,6 +63,7 @@
 		937797751BB205B800A1741C /* XYZMultilineFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYZMultilineFieldCell.xib; sourceTree = "<group>"; };
 		937797761BB205B800A1741C /* XYZSwitchFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYZSwitchFieldCell.swift; sourceTree = "<group>"; };
 		937797771BB205B800A1741C /* XYZSwitchFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYZSwitchFieldCell.xib; sourceTree = "<group>"; };
+		937797841BB20C3B00A1741C /* XYDField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDField.swift; sourceTree = "<group>"; };
 		AC3423051B7D327700D5A4AD /* YFormsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YFormsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3423091B7D327700D5A4AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC34230A1B7D327700D5A4AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		937797831BB20C2E00A1741C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				937797841BB20C3B00A1741C /* XYDField.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		AC3422FC1B7D327700D5A4AD = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +172,7 @@
 		AC3423831B7E80BD00D5A4AD /* YForms */ = {
 			isa = PBXGroup;
 			children = (
+				937797831BB20C2E00A1741C /* Model */,
 				AC3423841B7E80BD00D5A4AD /* Controls */,
 				AC3423891B7E80BD00D5A4AD /* Dependencies */,
 				AC34238C1B7E80BD00D5A4AD /* YFormController.swift */,
@@ -330,6 +341,7 @@
 				AC3423941B7E80BD00D5A4AD /* FloatLabelTextField.swift in Sources */,
 				AC34230B1B7D327700D5A4AD /* AppDelegate.swift in Sources */,
 				AC3423951B7E80BD00D5A4AD /* Regex.swift in Sources */,
+				937797851BB20C3B00A1741C /* XYDField.swift in Sources */,
 				AC3423961B7E80BD00D5A4AD /* YFormController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

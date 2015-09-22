@@ -65,12 +65,12 @@ class YFormController: UIViewController {
     
     // MARK: Public Methods
     
-    func addField(field: YFField, inSection section: Int = 0) {
+    func addField(field: XYDField, inSection section: Int = 0) {
         collectionViewDataSource?.addField(field, inSection: section)
     }
     
     // Add a field with a selector
-    func addField(field: YFField, inSection section: Int = 0, showSelector: () -> ()) {
+    func addField(field: XYDField, inSection section: Int = 0, showSelector: () -> ()) {
         field.showSelector = showSelector
         collectionViewDataSource?.addField(field, inSection: section)
     }
@@ -122,7 +122,7 @@ class YFormController: UIViewController {
 }
 
 protocol YFormDelegate {
-    func formController(formController: YFormController, updatedField field: YFField, atIndexPath indexPath: XYZIndexPath)
+    func formController(formController: YFormController, updatedField field: XYDField, atIndexPath indexPath: XYZIndexPath)
 }
 
 // TODO: Move to another File

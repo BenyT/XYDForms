@@ -45,7 +45,6 @@ class MainViewController: UIViewController, YFormDelegate {
             formController.addField(lastNameField, inSection: i)
     
             // Using selectors
-            // todo: fix selectors
             let emailField = YFTextField(identifier: "email", placeHolder: "email")
             emailField.validation = emailValidation
             
@@ -67,7 +66,7 @@ class MainViewController: UIViewController, YFormDelegate {
     
     // MARK: YFormDelegate
     
-    func formController(formController: YFormController, updatedField field: YFField, atIndexPath indexPath: XYZIndexPath) {
+    func formController(formController: YFormController, updatedField field: XYDField, atIndexPath indexPath: XYZIndexPath) {
         let person = persons[indexPath.1]
         switch field.identifier {
         case "firstName":

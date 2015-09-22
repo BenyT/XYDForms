@@ -17,33 +17,7 @@ import UIKit
 
 // MARK: Field
 
-class YFField: NSObject {
-    
-    private (set) var identifier: String = ""
-    var value: AnyObject?
-    var type: YFFieldType = .Text
-    
-    var validation: YFValidation?
-
-    var percentageWidth: CGFloat = 1
-    var heightMultiplier: CGFloat = 1
-    
-    // Handle selectors
-    private (set) var shouldShowSelector: Bool = false
-    var showSelector: (() -> ())? {
-        didSet {
-            shouldShowSelector = true
-        }
-    }
-    
-    init(identifier: String, type: YFFieldType = .Text) {
-        self.identifier = identifier
-        self.type = type
-    }
-    
-}
-
-class YFTextField: YFField {
+class YFTextField: XYDField {
     
     var textField: FloatLabelTextField?
     var errorMessage: String?
@@ -71,7 +45,7 @@ class XYFDateField: YFTextField {
 
 struct YFSection {
     
-    var fields: [YFField] = []
+    var fields: [XYDField] = []
     
 }
 
