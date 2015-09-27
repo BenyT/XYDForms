@@ -116,7 +116,11 @@ class XYDFormController: UIViewController {
     }
     
     func validateFields() -> Bool {
-        return XYDValidator.validateFields(collectionViewDataSource!.sections)
+      let formIsValid = XYDValidator.validateFields(collectionViewDataSource!.sections)
+      if !formIsValid {
+         collectionView.reloadData()
+      }
+        return formIsValid
     }
     
 }

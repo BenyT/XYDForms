@@ -34,7 +34,6 @@ class XYDValidator: NSObject {
             for field in section.fields {
                 if let textField = field as? XYDTextField, text = textField.value as? String, errorMessage = XYDValidator.errorMessageForText(text, withValidation: textField.validation) {
                     textField.errorMessage = errorMessage
-                    textField.textField?.errorMessage = errorMessage
                     passedValidation = false
                 }
             }

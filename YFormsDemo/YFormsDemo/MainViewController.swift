@@ -47,10 +47,8 @@ class MainViewController: UIViewController, XYDFormDelegate {
             // Using selectors
             let emailField = XYDTextField(identifier: "email", placeHolder: "email")
             emailField.validation = emailValidation
-            
-            formController.addField(emailField, inSection: i, showSelector: { () -> () in
-                self.formController.setText("defaultemail\(i + 1)@gmail.com", inFieldWithIdentifier: "email", inSection: i)
-            })
+         formController.addField(emailField, inSection: i)
+
         }
         formController.setSectionTitles("Person")
         

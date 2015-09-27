@@ -10,7 +10,6 @@ import UIKit
 
 class XYDTextField: XYDField {
     
-    var textField: FloatLabelTextField?
     var errorMessage: String?
     
     private (set) var placeHolder: String = ""
@@ -18,6 +17,7 @@ class XYDTextField: XYDField {
     init(identifier: String, placeHolder: String) {
         super.init(identifier: identifier, type: .Text)
         self.placeHolder = placeHolder
+      self.value = ""
     }
     
 }

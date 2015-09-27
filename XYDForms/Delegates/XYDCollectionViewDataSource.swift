@@ -51,7 +51,6 @@ class XYDCollectionViewDataSource: NSObject, UICollectionViewDataSource, TagWrit
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier(XYZCells.TextField, forIndexPath: indexPath) as? XYDFieldCell
             // todo: RENAME TEXTFIELD
             if let textField = field as? XYDTextField {
-                textField.textField = cell?.textField
                 if let text = textField.value as? String {
                     println(text)
                     cell?.textField.text = text
