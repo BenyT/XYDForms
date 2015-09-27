@@ -1,5 +1,5 @@
 //
-//  YFTagFieldCell.swift
+//  XYDTagFieldCell.swift
 //  MealsApp
 //
 //  Created by Meals App on 06/09/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class YFTagFieldCell: UICollectionViewCell {
+class XYDTagFieldCell: UICollectionViewCell {
 
     @IBOutlet weak var tagWriteView: TagWriteView!
     

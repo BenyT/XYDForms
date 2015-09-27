@@ -1,5 +1,5 @@
 //
-//  YFFieldHeader.swift
+//  XYDFieldCell.swift
 //  YForms
 //
 //  Created by Mateus, Diogo on 23/05/2015.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-class YFFieldHeader: UICollectionReusableView {
-        
-   @IBOutlet weak var titleLabel: UILabel!
+class XYDFieldCell: UICollectionViewCell {
+       
+   @IBOutlet weak var textField: FloatLabelTextField!
    
 }

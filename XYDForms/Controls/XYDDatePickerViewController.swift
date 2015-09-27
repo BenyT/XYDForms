@@ -1,5 +1,5 @@
 //
-//  DatePickerViewController.swift
+//  XYDDatePickerViewController.swift
 //  MealsApp
 //
 //  Created by Meals App on 20/09/15.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class DatePickerViewController: UIViewController {
+class XYDDatePickerViewController: UIViewController {
     
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
     var field: XYDDateField!
-    var delegate: XYFDatePickerViewControllerDelegate?
+    var delegate: XYDDatePickerViewControllerDelegate?
     
     override var nibName: String {
         return "DatePickerViewController"
@@ -36,6 +36,6 @@ class DatePickerViewController: UIViewController {
     
 }
 
-protocol XYFDatePickerViewControllerDelegate {
+protocol XYDDatePickerViewControllerDelegate {
     func datePickerViewController(field: XYDDateField, date: NSDate)
 }

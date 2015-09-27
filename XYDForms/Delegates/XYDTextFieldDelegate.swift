@@ -13,7 +13,7 @@ class XYDTextFieldDelegate: NSObject, UITextFieldDelegate {
     private var formController: YFormController!
     
     init(formController: YFormController) {
-        super.init()
+        super.init() 
         self.formController = formController
     }
     
@@ -21,7 +21,7 @@ class XYDTextFieldDelegate: NSObject, UITextFieldDelegate {
         if let textField = textField as? YTextField {
             let field = formController.collectionViewDataSource!.sections[textField.indexPath.section].fields[textField.indexPath.row]
             if let dateField = field as? XYDDateField {
-                let datePickerViewController = DatePickerViewController()
+                let datePickerViewController = XYDDatePickerViewController()
                 datePickerViewController.field = dateField
                 datePickerViewController.delegate = formController.collectionViewDataSource
                 dateField.viewController.presentViewController(datePickerViewController, animated: true, completion: nil)

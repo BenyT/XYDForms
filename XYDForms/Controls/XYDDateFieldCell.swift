@@ -1,5 +1,5 @@
 //
-//  XYZDateFieldCell.swift
+//  XYDDateFieldCell.swift
 //  MealsApp
 //
 //  Created by Meals App on 20/09/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class XYZDateFieldCell: UICollectionViewCell {
+class XYDDateFieldCell: UICollectionViewCell {
 
     @IBOutlet weak var textField: FloatLabelTextField!
 }

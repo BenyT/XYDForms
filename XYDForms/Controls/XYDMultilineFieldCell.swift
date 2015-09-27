@@ -1,5 +1,5 @@
 //
-//  XYZMultilineFieldCell.swift
+//  XYDMultilineFieldCell.swift
 //  MealsApp
 //
 //  Created by Meals App on 20/09/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class XYZMultilineFieldCell: UICollectionViewCell {
+class XYDMultilineFieldCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class XYDCollectionViewDataSource: NSObject, UICollectionViewDataSource, TagWriteViewDelegate, YFPhotoFieldCellDelegate, XYZSwitchFieldCellDelegate, XYFDatePickerViewControllerDelegate {
+class XYDCollectionViewDataSource: NSObject, UICollectionViewDataSource, TagWriteViewDelegate, XYDPhotoFieldCellDelegate, XYDSwitchFieldCellDelegate, XYDDatePickerViewControllerDelegate {
     
     var sections: [XYDSection] = []
     var textFieldDelegate: XYDTextFieldDelegate!
@@ -26,29 +26,29 @@ class XYDCollectionViewDataSource: NSObject, UICollectionViewDataSource, TagWrit
         
         switch field.type {
         case .Photo:
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(XYZCells.PhotoField, forIndexPath: indexPath) as? YFPhotoFieldCell
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(XYZCells.PhotoField, forIndexPath: indexPath) as? XYDPhotoFieldCell
             cell?.viewController = formController
             cell?.delegate = self
             return cell!
         case .Tags:
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(XYZCells.TagField, forIndexPath: indexPath) as? YFTagFieldCell
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(XYZCells.TagField, forIndexPath: indexPath) as? XYDTagFieldCell
             cell?.tagWriteView.delegate = self
             return cell!
         case .Multiline:
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(XYZCells.MultilineField, forIndexPath: indexPath) as? XYZMultilineFieldCell
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(XYZCells.MultilineField, forIndexPath: indexPath) as? XYDMultilineFieldCell
             return cell!
         case .Switch:
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(XYZCells.SwitchField, forIndexPath: indexPath) as? XYZSwitchFieldCell
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(XYZCells.SwitchField, forIndexPath: indexPath) as? XYDSwitchFieldCell
             cell?.delegate = self
             cell?.indexPath = indexPath
             return cell!
         case .Date:
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(XYZCells.DateField, forIndexPath: indexPath) as? XYZDateFieldCell
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(XYZCells.DateField, forIndexPath: indexPath) as? XYDDateFieldCell
             cell?.textField.delegate = textFieldDelegate
             cell?.textField.indexPath = indexPath
             return cell!
         default:
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(XYZCells.TextField, forIndexPath: indexPath) as? YFFieldCell
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(XYZCells.TextField, forIndexPath: indexPath) as? XYDFieldCell
             // todo: RENAME TEXTFIELD
             if let textField = field as? XYDTextField {
                 textField.textField = cell?.textField
@@ -79,7 +79,7 @@ class XYDCollectionViewDataSource: NSObject, UICollectionViewDataSource, TagWrit
     }
     
     func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
-        let headerView = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: XYZCells.Header, forIndexPath: indexPath) as! YFFieldHeader
+        let headerView = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: XYZCells.Header, forIndexPath: indexPath) as! XYDFieldHeader
         headerView.titleLabel.text = sectionTitles![indexPath.section]
         return headerView
     }
@@ -106,12 +106,12 @@ class XYDCollectionViewDataSource: NSObject, UICollectionViewDataSource, TagWrit
     
     // MARK: ImagePickerManagerDelegate
     
-    func photoFieldCellDelegate(cell: YFPhotoFieldCell, didFinishPickingImage image: UIImage!) {
+    func photoFieldCellDelegate(cell: XYDPhotoFieldCell, didFinishPickingImage image: UIImage!) {
         cell.photoButton.setBackgroundImage(image, forState: UIControlState.Normal)
         //        formController.delegate?.formController(formController, updatedField: <#YFBasicField#>, atIndexPath: <#NSIndexPath#>)
     }
     
-    func switchFieldCell(switchFieldCell: XYZSwitchFieldCell, newValue: Bool) {
+    func switchFieldCell(switchFieldCell: XYDSwitchFieldCell, newValue: Bool) {
         let field = sections[switchFieldCell.indexPath.section].fields[switchFieldCell.indexPath.row]
         field.value = newValue
         formController.delegate?.formController(formController, updatedField: field, atIndexPath: (field.identifier, switchFieldCell.indexPath.section))

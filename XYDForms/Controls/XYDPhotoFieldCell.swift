@@ -1,5 +1,5 @@
 //
-//  YFPhotoFieldCell.swift
+//  XYDPhotoFieldCell.swift
 //  MealsApp
 //
 //  Created by Meals App on 19/09/15.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class YFPhotoFieldCell: UICollectionViewCell, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class XYDPhotoFieldCell: UICollectionViewCell, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var photoButton: UIButton!
     
     let imagePicker = UIImagePickerController()
-    var delegate: YFPhotoFieldCellDelegate?
+    var delegate: XYDPhotoFieldCellDelegate?
     var viewController: UIViewController!
     
     override func awakeFromNib() {
@@ -35,6 +35,6 @@ class YFPhotoFieldCell: UICollectionViewCell, UINavigationControllerDelegate, UI
     
 }
 
-protocol YFPhotoFieldCellDelegate {
-    func photoFieldCellDelegate(cell: YFPhotoFieldCell, didFinishPickingImage image: UIImage!)
+protocol XYDPhotoFieldCellDelegate {
+    func photoFieldCellDelegate(cell: XYDPhotoFieldCell, didFinishPickingImage image: UIImage!)
 }

@@ -1,5 +1,5 @@
 //
-//  XYZSwitchFieldCell.swift
+//  XYDSwitchFieldCell.swift
 //  MealsApp
 //
 //  Created by Meals App on 20/09/15.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class XYZSwitchFieldCell: XYZCollectionViewCell {
+class XYDSwitchFieldCell: XYZCollectionViewCell {
 
     @IBOutlet weak var switchControl: UISwitch!
     @IBOutlet weak var titleLabel: UILabel!
-    var delegate: XYZSwitchFieldCellDelegate?
+    var delegate: XYDSwitchFieldCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +23,6 @@ class XYZSwitchFieldCell: XYZCollectionViewCell {
     }
 }
 
-protocol XYZSwitchFieldCellDelegate {
-    func switchFieldCell(switchFieldCell: XYZSwitchFieldCell, newValue: Bool)
+protocol XYDSwitchFieldCellDelegate {
+    func switchFieldCell(switchFieldCell: XYDSwitchFieldCell, newValue: Bool)
 }
