@@ -10,7 +10,7 @@ import UIKit
 
 class XYDCollectionViewFlowLayout: UICollectionViewFlowLayout {
    
-    var formController: YFormController!
+    var formController: XYDFormController!
     private var cache = [UICollectionViewLayoutAttributes]()
     
     override func prepareLayout() {

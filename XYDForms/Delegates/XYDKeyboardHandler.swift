@@ -13,11 +13,11 @@ class XYDKeyboardHandler: NSObject {
     
     static let ActiveTextFieldUpdateNotification = "YActiveTextFieldUpdateNotification"
     
-    private var formController: YFormController!
+    private var formController: XYDFormController!
     private var keyboardFrame : CGRect?
     private var activeTextField: YTextField?
     
-    init(formController: YFormController) {
+    init(formController: XYDFormController) {
         super.init()
         self.formController = formController
         // Subscribe to keyboard listeners

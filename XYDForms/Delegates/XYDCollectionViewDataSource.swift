@@ -14,9 +14,9 @@ class XYDCollectionViewDataSource: NSObject, UICollectionViewDataSource, TagWrit
     var textFieldDelegate: XYDTextFieldDelegate!
     var sectionTitles: [String]?
     
-    var formController: YFormController!
+    var formController: XYDFormController!
     
-    init(formController: YFormController) {
+    init(formController: XYDFormController) {
         self.formController = formController
     }
     
@@ -114,12 +114,12 @@ class XYDCollectionViewDataSource: NSObject, UICollectionViewDataSource, TagWrit
     func switchFieldCell(switchFieldCell: XYDSwitchFieldCell, newValue: Bool) {
         let field = sections[switchFieldCell.indexPath.section].fields[switchFieldCell.indexPath.row]
         field.value = newValue
-        formController.delegate?.formController(formController, updatedField: field, atIndexPath: (field.identifier, switchFieldCell.indexPath.section))
+        formController.delegate?.formController(formController, updatedField: field, inSection: switchFieldCell.indexPath.section)
     }
     
     func datePickerViewController(field: XYDDateField, date: NSDate) {
         field.value = date
-        formController.delegate?.formController(formController, updatedField: field, atIndexPath: (field.identifier, 0))
+        formController.delegate?.formController(formController, updatedField: field, inSection: 0)
         // todo: fill text field
     }
     

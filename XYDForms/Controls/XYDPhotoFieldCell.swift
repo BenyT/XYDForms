@@ -8,7 +8,7 @@
 
 import UIKit
 
-class XYDPhotoFieldCell: UICollectionViewCell, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class XYDPhotoFieldCell: XYDCollectionViewCell, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var photoButton: UIButton!
     

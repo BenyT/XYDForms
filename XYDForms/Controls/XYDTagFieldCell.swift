@@ -8,7 +8,7 @@
 
 import UIKit
 
-class XYDTagFieldCell: UICollectionViewCell {
+class XYDTagFieldCell: XYDCollectionViewCell {
 
     @IBOutlet weak var tagWriteView: TagWriteView!
     

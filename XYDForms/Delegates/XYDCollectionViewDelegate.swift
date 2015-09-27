@@ -10,9 +10,9 @@ import UIKit
 
 class XYDCollectionViewDelegate: NSObject, UICollectionViewDelegate  {
     
-    var formController: YFormController!
+    var formController: XYDFormController!
     
-    init(formController: YFormController) {
+    init(formController: XYDFormController) {
         self.formController = formController
     }
     

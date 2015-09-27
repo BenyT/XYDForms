@@ -1,5 +1,5 @@
 //
-//  YFormController.swift
+//  XYDFormController.swift
 //  YForms
 //
 //  Created by Mateus, Diogo on 05/08/15.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class YFormController: UIViewController {
+class XYDFormController: UIViewController {
     
     var collectionView: UICollectionView!
     var collectionViewDataSource: XYDCollectionViewDataSource?
     var collectionViewDelegate: XYDCollectionViewDelegate?
-    var delegate: YFormDelegate?
+    var delegate: XYDFormDelegate?
     var keyboardHandler: XYDKeyboardHandler?
     
     var fieldHeight: CGFloat = 50
@@ -87,7 +87,7 @@ class YFormController: UIViewController {
                     // Update field with text
                     field.value = text
                     let indexPath = NSIndexPath(forRow: index, inSection: section)
-                    delegate?.formController(self, updatedField: field, atIndexPath: (field.identifier, indexPath.section))
+                    delegate?.formController(self, updatedField: field, inSection: indexPath.section)
                     collectionView.reloadItemsAtIndexPaths([indexPath])
                     break
                 }
@@ -119,10 +119,6 @@ class YFormController: UIViewController {
         return XYDValidator.validateFields(collectionViewDataSource!.sections)
     }
     
-}
-
-protocol YFormDelegate {
-    func formController(formController: YFormController, updatedField field: XYDField, atIndexPath indexPath: XYZIndexPath)
 }
 
 // TODO: Move to another File

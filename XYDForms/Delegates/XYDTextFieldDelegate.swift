@@ -10,9 +10,9 @@ import UIKit
 
 class XYDTextFieldDelegate: NSObject, UITextFieldDelegate {
     
-    private var formController: YFormController!
+    private var formController: XYDFormController!
     
-    init(formController: YFormController) {
+    init(formController: XYDFormController) {
         super.init() 
         self.formController = formController
     }
@@ -40,12 +40,12 @@ class XYDTextFieldDelegate: NSObject, UITextFieldDelegate {
     // Apply text from textField in the correct Form Field. Show error message if needed. Call form's delegate if no error.
     func textFieldDidEndEditing(textField: UITextField) {
         if let textField = textField as? YTextField {
-            let field = formController.collectionViewDataSource!.sections[textField.indexPath.section].fields[textField.indexPath.row] as! XYDTextField
+            let field = fieldForIndexPath(textField.indexPath)
             field.value = textField.text
             field.errorMessage = XYDValidator.errorMessageForText(textField.text, withValidation: field.validation)
             (textField as! FloatLabelTextField).errorMessage = field.errorMessage
             if field.errorMessage == nil {
-                formController.delegate?.formController(formController, updatedField: field, atIndexPath: (field.identifier, textField.indexPath.section))
+               formController.delegate?.formController(formController, updatedField: field, inSection: textField.indexPath.section)
             }
         } else {
             assertionFailure("textField should always be YTextField")
@@ -55,7 +55,7 @@ class XYDTextFieldDelegate: NSObject, UITextFieldDelegate {
     // Handle maximum number of characters validation
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         if let textField = textField as? YTextField {
-            let field = formController.collectionViewDataSource!.sections[textField.indexPath.section].fields[textField.indexPath.row] // TODO: custom method to get this
+            let field = fieldForIndexPath(textField.indexPath)
             if let validation = field.validation {
                 if validation.maxCharacters > 0 && (count(textField.text) + count(string) - range.length) > validation.maxCharacters {
                     return false
@@ -70,5 +70,13 @@ class XYDTextFieldDelegate: NSObject, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true;
     }
-    
+   
+   func fieldForIndexPath(indexPath: NSIndexPath) -> XYDTextField {
+      return formController.collectionViewDataSource!.sections[indexPath.section].fields[indexPath.row] as! XYDTextField
+   }
+   
+//   func fieldForTexField(textField: UITextField) -> XYDTextField {
+//      return textField.superview?.superview as! XYDTextField
+//   }
+   
 }

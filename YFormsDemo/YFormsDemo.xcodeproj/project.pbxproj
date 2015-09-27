@@ -47,8 +47,9 @@
 		E7AE90781BB83E3800A6AA2E /* XYDValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90541BB83E3800A6AA2E /* XYDValidation.swift */; };
 		E7AE90791BB83E3800A6AA2E /* XYDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90551BB83E3800A6AA2E /* XYDConstants.swift */; };
 		E7AE907A1BB83E3800A6AA2E /* XYDValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90561BB83E3800A6AA2E /* XYDValidator.swift */; };
-		E7AE907B1BB83E3800A6AA2E /* YFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90571BB83E3800A6AA2E /* YFormController.swift */; };
-		E7AE907C1BB83E3800A6AA2E /* YFormDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90581BB83E3800A6AA2E /* YFormDelegates.swift */; };
+		E7AE907B1BB83E3800A6AA2E /* XYDFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90571BB83E3800A6AA2E /* XYDFormController.swift */; };
+		E7AE90801BB849D400A6AA2E /* XYDFormDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE907F1BB849D400A6AA2E /* XYDFormDelegate.swift */; };
+		E7AE90821BB852A200A6AA2E /* XYDCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90811BB852A200A6AA2E /* XYDCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,8 +107,9 @@
 		E7AE90541BB83E3800A6AA2E /* XYDValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDValidation.swift; sourceTree = "<group>"; };
 		E7AE90551BB83E3800A6AA2E /* XYDConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDConstants.swift; sourceTree = "<group>"; };
 		E7AE90561BB83E3800A6AA2E /* XYDValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDValidator.swift; sourceTree = "<group>"; };
-		E7AE90571BB83E3800A6AA2E /* YFormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YFormController.swift; sourceTree = "<group>"; };
-		E7AE90581BB83E3800A6AA2E /* YFormDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YFormDelegates.swift; sourceTree = "<group>"; };
+		E7AE90571BB83E3800A6AA2E /* XYDFormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDFormController.swift; sourceTree = "<group>"; };
+		E7AE907F1BB849D400A6AA2E /* XYDFormDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDFormDelegate.swift; sourceTree = "<group>"; };
+		E7AE90811BB852A200A6AA2E /* XYDCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,8 +196,7 @@
 				E7AE904B1BB83E3800A6AA2E /* Model */,
 				E7AE90551BB83E3800A6AA2E /* XYDConstants.swift */,
 				E7AE90561BB83E3800A6AA2E /* XYDValidator.swift */,
-				E7AE90571BB83E3800A6AA2E /* YFormController.swift */,
-				E7AE90581BB83E3800A6AA2E /* YFormDelegates.swift */,
+				E7AE90571BB83E3800A6AA2E /* XYDFormController.swift */,
 			);
 			name = XYDForms;
 			path = ../../XYDForms;
@@ -250,12 +251,14 @@
 			isa = PBXGroup;
 			children = (
 				E7AE904C1BB83E3800A6AA2E /* Enums */,
-				E7AE904F1BB83E3800A6AA2E /* XYDDateField.swift */,
 				E7AE90501BB83E3800A6AA2E /* XYDField.swift */,
+				E7AE904F1BB83E3800A6AA2E /* XYDDateField.swift */,
 				E7AE90511BB83E3800A6AA2E /* XYDRegexValidation.swift */,
 				E7AE90521BB83E3800A6AA2E /* XYDSection.swift */,
 				E7AE90531BB83E3800A6AA2E /* XYDTextField.swift */,
 				E7AE90541BB83E3800A6AA2E /* XYDValidation.swift */,
+				E7AE907F1BB849D400A6AA2E /* XYDFormDelegate.swift */,
+				E7AE90811BB852A200A6AA2E /* XYDCollectionViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -377,9 +380,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7AE907C1BB83E3800A6AA2E /* YFormDelegates.swift in Sources */,
 				E7AE90691BB83E3800A6AA2E /* XYDCollectionViewDataSource.swift in Sources */,
-				E7AE907B1BB83E3800A6AA2E /* YFormController.swift in Sources */,
+				E7AE907B1BB83E3800A6AA2E /* XYDFormController.swift in Sources */,
 				E7AE905D1BB83E3800A6AA2E /* XYDMultilineFieldCell.swift in Sources */,
 				E7AE90741BB83E3800A6AA2E /* XYDField.swift in Sources */,
 				E7AE906D1BB83E3800A6AA2E /* XYDTextFieldDelegate.swift in Sources */,
@@ -395,8 +397,10 @@
 				E7AE90781BB83E3800A6AA2E /* XYDValidation.swift in Sources */,
 				E7AE90771BB83E3800A6AA2E /* XYDTextField.swift in Sources */,
 				E7AE906A1BB83E3800A6AA2E /* XYDCollectionViewDelegate.swift in Sources */,
+				E7AE90821BB852A200A6AA2E /* XYDCollectionViewCell.swift in Sources */,
 				E7AE90761BB83E3800A6AA2E /* XYDSection.swift in Sources */,
 				E7AE90711BB83E3800A6AA2E /* XYDCharacterValidation.swift in Sources */,
+				E7AE90801BB849D400A6AA2E /* XYDFormDelegate.swift in Sources */,
 				E7AE906C1BB83E3800A6AA2E /* XYDKeyboardHandler.swift in Sources */,
 				AC34230D1B7D327700D5A4AD /* MainViewController.swift in Sources */,
 				E7AE90751BB83E3800A6AA2E /* XYDRegexValidation.swift in Sources */,

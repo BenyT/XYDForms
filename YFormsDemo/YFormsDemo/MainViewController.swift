@@ -9,11 +9,11 @@
 import UIKit
 
 
-class MainViewController: UIViewController, YFormDelegate {
+class MainViewController: UIViewController, XYDFormDelegate {
     
     @IBOutlet weak var submitButton: UIButton!
     
-    private var formController: YFormController!
+    private var formController: XYDFormController!
     private var persons: [Person] = []
     
     private static let seguePushEnd = "seguePushEnd"
@@ -30,7 +30,7 @@ class MainViewController: UIViewController, YFormDelegate {
                 
         // Fields setup
         persons = [Person(), Person(), Person(), Person(), Person(), Person(), Person(), Person(), Person(), Person(), Person(), Person()]
-        formController = YFormController()
+        formController = XYDFormController()
         formController.delegate = self
         for i in 0..<persons.count {
             
@@ -66,8 +66,8 @@ class MainViewController: UIViewController, YFormDelegate {
     
     // MARK: YFormDelegate
     
-    func formController(formController: YFormController, updatedField field: XYDField, atIndexPath indexPath: XYZIndexPath) {
-        let person = persons[indexPath.1]
+   func formController(formController: XYDFormController, updatedField field: XYDField, inSection section: Int) {
+        let person = persons[section]
         switch field.identifier {
         case "firstName":
             person.firstName = field.value as! String

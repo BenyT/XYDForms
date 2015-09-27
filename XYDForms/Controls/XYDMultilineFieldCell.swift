@@ -8,7 +8,7 @@
 
 import UIKit
 
-class XYDMultilineFieldCell: UICollectionViewCell {
+class XYDMultilineFieldCell: XYDCollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

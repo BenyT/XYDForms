@@ -8,16 +8,12 @@
 
 import UIKit
 
-class XYDSwitchFieldCell: XYZCollectionViewCell {
+class XYDSwitchFieldCell: XYDCollectionViewCell {
 
     @IBOutlet weak var switchControl: UISwitch!
     @IBOutlet weak var titleLabel: UILabel!
     var delegate: XYDSwitchFieldCellDelegate?
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
     @IBAction func switchValueChanged(sender: AnyObject) {
         delegate?.switchFieldCell(self, newValue: switchControl.on)
     }

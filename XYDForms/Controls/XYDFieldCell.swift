@@ -8,7 +8,7 @@
 
 import UIKit
 
-class XYDFieldCell: UICollectionViewCell {
+class XYDFieldCell: XYDCollectionViewCell {
        
    @IBOutlet weak var textField: FloatLabelTextField!
    
