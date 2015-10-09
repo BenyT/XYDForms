@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>346AF770-A43E-4CAE-A5DB-76F8CABD0F57</string>
+	<key>IDESourceControlProjectName</key>
+	<string>XYDFormsDemo2</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9C2048A8A1362491A3D241CB911F0A5FB2E43950</key>
+		<string>https://github.com/dmateus/XYDForms.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>XYDFormsDemo2/XYDFormsDemo2.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9C2048A8A1362491A3D241CB911F0A5FB2E43950</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/dmateus/XYDForms.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9C2048A8A1362491A3D241CB911F0A5FB2E43950</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9C2048A8A1362491A3D241CB911F0A5FB2E43950</string>
+			<key>IDESourceControlWCCName</key>
+			<string>XYDForms</string>
+		</dict>
+	</array>
+</dict>
+</plist>

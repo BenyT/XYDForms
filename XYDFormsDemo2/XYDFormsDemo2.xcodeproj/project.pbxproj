@@ -13,6 +13,43 @@
 		E7AE90991BB85E4E00A6AA2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7AE90981BB85E4E00A6AA2E /* Images.xcassets */; };
 		E7AE909C1BB85E4E00A6AA2E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7AE909A1BB85E4E00A6AA2E /* LaunchScreen.xib */; };
 		E7AE90A81BB85E4E00A6AA2E /* XYDFormsDemo2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90A71BB85E4E00A6AA2E /* XYDFormsDemo2Tests.swift */; };
+		E7AE90DC1BB85EF500A6AA2E /* XYDDateFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90B31BB85EF500A6AA2E /* XYDDateFieldCell.swift */; };
+		E7AE90DD1BB85EF500A6AA2E /* XYDDateFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7AE90B41BB85EF500A6AA2E /* XYDDateFieldCell.xib */; };
+		E7AE90DE1BB85EF500A6AA2E /* XYDDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90B51BB85EF500A6AA2E /* XYDDatePickerViewController.swift */; };
+		E7AE90DF1BB85EF500A6AA2E /* XYDDatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7AE90B61BB85EF500A6AA2E /* XYDDatePickerViewController.xib */; };
+		E7AE90E01BB85EF500A6AA2E /* XYDFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90B71BB85EF500A6AA2E /* XYDFieldCell.swift */; };
+		E7AE90E11BB85EF500A6AA2E /* XYDFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7AE90B81BB85EF500A6AA2E /* XYDFieldCell.xib */; };
+		E7AE90E21BB85EF500A6AA2E /* XYDFieldHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90B91BB85EF500A6AA2E /* XYDFieldHeader.swift */; };
+		E7AE90E31BB85EF500A6AA2E /* XYDFieldHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7AE90BA1BB85EF500A6AA2E /* XYDFieldHeader.xib */; };
+		E7AE90E41BB85EF500A6AA2E /* XYDMultilineFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90BB1BB85EF500A6AA2E /* XYDMultilineFieldCell.swift */; };
+		E7AE90E51BB85EF500A6AA2E /* XYDMultilineFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7AE90BC1BB85EF500A6AA2E /* XYDMultilineFieldCell.xib */; };
+		E7AE90E61BB85EF500A6AA2E /* XYDPhotoFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90BD1BB85EF500A6AA2E /* XYDPhotoFieldCell.swift */; };
+		E7AE90E71BB85EF500A6AA2E /* XYDPhotoFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7AE90BE1BB85EF500A6AA2E /* XYDPhotoFieldCell.xib */; };
+		E7AE90E81BB85EF500A6AA2E /* XYDSwitchFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90BF1BB85EF500A6AA2E /* XYDSwitchFieldCell.swift */; };
+		E7AE90E91BB85EF500A6AA2E /* XYDSwitchFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7AE90C01BB85EF500A6AA2E /* XYDSwitchFieldCell.xib */; };
+		E7AE90EA1BB85EF500A6AA2E /* XYDTagFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90C11BB85EF500A6AA2E /* XYDTagFieldCell.swift */; };
+		E7AE90EB1BB85EF500A6AA2E /* XYDTagFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7AE90C21BB85EF500A6AA2E /* XYDTagFieldCell.xib */; };
+		E7AE90EC1BB85EF500A6AA2E /* XYDCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90C41BB85EF500A6AA2E /* XYDCollectionViewDataSource.swift */; };
+		E7AE90ED1BB85EF500A6AA2E /* XYDCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90C51BB85EF500A6AA2E /* XYDCollectionViewDelegate.swift */; };
+		E7AE90EE1BB85EF500A6AA2E /* XYDCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90C61BB85EF500A6AA2E /* XYDCollectionViewFlowLayout.swift */; };
+		E7AE90EF1BB85EF500A6AA2E /* XYDKeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90C71BB85EF500A6AA2E /* XYDKeyboardHandler.swift */; };
+		E7AE90F01BB85EF500A6AA2E /* XYDTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90C81BB85EF500A6AA2E /* XYDTextFieldDelegate.swift */; };
+		E7AE90F11BB85EF500A6AA2E /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90CA1BB85EF500A6AA2E /* FloatLabelTextField.swift */; };
+		E7AE90F21BB85EF500A6AA2E /* Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90CB1BB85EF500A6AA2E /* Regex.swift */; };
+		E7AE90F31BB85EF500A6AA2E /* TagWriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90CC1BB85EF500A6AA2E /* TagWriteView.swift */; };
+		E7AE90F41BB85EF500A6AA2E /* XYDCharacterValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90CF1BB85EF500A6AA2E /* XYDCharacterValidation.swift */; };
+		E7AE90F51BB85EF500A6AA2E /* XYDFieldType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90D01BB85EF500A6AA2E /* XYDFieldType.swift */; };
+		E7AE90F61BB85EF500A6AA2E /* XYDCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90D11BB85EF500A6AA2E /* XYDCollectionViewCell.swift */; };
+		E7AE90F71BB85EF500A6AA2E /* XYDDateField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90D21BB85EF500A6AA2E /* XYDDateField.swift */; };
+		E7AE90F81BB85EF500A6AA2E /* XYDField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90D31BB85EF500A6AA2E /* XYDField.swift */; };
+		E7AE90F91BB85EF500A6AA2E /* XYDFormDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90D41BB85EF500A6AA2E /* XYDFormDelegate.swift */; };
+		E7AE90FA1BB85EF500A6AA2E /* XYDRegexValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90D51BB85EF500A6AA2E /* XYDRegexValidation.swift */; };
+		E7AE90FB1BB85EF500A6AA2E /* XYDSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90D61BB85EF500A6AA2E /* XYDSection.swift */; };
+		E7AE90FC1BB85EF500A6AA2E /* XYDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90D71BB85EF500A6AA2E /* XYDTextField.swift */; };
+		E7AE90FD1BB85EF500A6AA2E /* XYDValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90D81BB85EF500A6AA2E /* XYDValidation.swift */; };
+		E7AE90FE1BB85EF500A6AA2E /* XYDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90D91BB85EF500A6AA2E /* XYDConstants.swift */; };
+		E7AE90FF1BB85EF500A6AA2E /* XYDFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90DA1BB85EF500A6AA2E /* XYDFormController.swift */; };
+		E7AE91001BB85EF500A6AA2E /* XYDValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AE90DB1BB85EF500A6AA2E /* XYDValidator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +73,43 @@
 		E7AE90A11BB85E4E00A6AA2E /* XYDFormsDemo2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XYDFormsDemo2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7AE90A61BB85E4E00A6AA2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7AE90A71BB85E4E00A6AA2E /* XYDFormsDemo2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XYDFormsDemo2Tests.swift; sourceTree = "<group>"; };
+		E7AE90B31BB85EF500A6AA2E /* XYDDateFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDDateFieldCell.swift; sourceTree = "<group>"; };
+		E7AE90B41BB85EF500A6AA2E /* XYDDateFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYDDateFieldCell.xib; sourceTree = "<group>"; };
+		E7AE90B51BB85EF500A6AA2E /* XYDDatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDDatePickerViewController.swift; sourceTree = "<group>"; };
+		E7AE90B61BB85EF500A6AA2E /* XYDDatePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYDDatePickerViewController.xib; sourceTree = "<group>"; };
+		E7AE90B71BB85EF500A6AA2E /* XYDFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDFieldCell.swift; sourceTree = "<group>"; };
+		E7AE90B81BB85EF500A6AA2E /* XYDFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYDFieldCell.xib; sourceTree = "<group>"; };
+		E7AE90B91BB85EF500A6AA2E /* XYDFieldHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDFieldHeader.swift; sourceTree = "<group>"; };
+		E7AE90BA1BB85EF500A6AA2E /* XYDFieldHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYDFieldHeader.xib; sourceTree = "<group>"; };
+		E7AE90BB1BB85EF500A6AA2E /* XYDMultilineFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDMultilineFieldCell.swift; sourceTree = "<group>"; };
+		E7AE90BC1BB85EF500A6AA2E /* XYDMultilineFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYDMultilineFieldCell.xib; sourceTree = "<group>"; };
+		E7AE90BD1BB85EF500A6AA2E /* XYDPhotoFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDPhotoFieldCell.swift; sourceTree = "<group>"; };
+		E7AE90BE1BB85EF500A6AA2E /* XYDPhotoFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYDPhotoFieldCell.xib; sourceTree = "<group>"; };
+		E7AE90BF1BB85EF500A6AA2E /* XYDSwitchFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDSwitchFieldCell.swift; sourceTree = "<group>"; };
+		E7AE90C01BB85EF500A6AA2E /* XYDSwitchFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYDSwitchFieldCell.xib; sourceTree = "<group>"; };
+		E7AE90C11BB85EF500A6AA2E /* XYDTagFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDTagFieldCell.swift; sourceTree = "<group>"; };
+		E7AE90C21BB85EF500A6AA2E /* XYDTagFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XYDTagFieldCell.xib; sourceTree = "<group>"; };
+		E7AE90C41BB85EF500A6AA2E /* XYDCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		E7AE90C51BB85EF500A6AA2E /* XYDCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		E7AE90C61BB85EF500A6AA2E /* XYDCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		E7AE90C71BB85EF500A6AA2E /* XYDKeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDKeyboardHandler.swift; sourceTree = "<group>"; };
+		E7AE90C81BB85EF500A6AA2E /* XYDTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDTextFieldDelegate.swift; sourceTree = "<group>"; };
+		E7AE90CA1BB85EF500A6AA2E /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
+		E7AE90CB1BB85EF500A6AA2E /* Regex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regex.swift; sourceTree = "<group>"; };
+		E7AE90CC1BB85EF500A6AA2E /* TagWriteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagWriteView.swift; sourceTree = "<group>"; };
+		E7AE90CF1BB85EF500A6AA2E /* XYDCharacterValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDCharacterValidation.swift; sourceTree = "<group>"; };
+		E7AE90D01BB85EF500A6AA2E /* XYDFieldType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDFieldType.swift; sourceTree = "<group>"; };
+		E7AE90D11BB85EF500A6AA2E /* XYDCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDCollectionViewCell.swift; sourceTree = "<group>"; };
+		E7AE90D21BB85EF500A6AA2E /* XYDDateField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDDateField.swift; sourceTree = "<group>"; };
+		E7AE90D31BB85EF500A6AA2E /* XYDField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDField.swift; sourceTree = "<group>"; };
+		E7AE90D41BB85EF500A6AA2E /* XYDFormDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDFormDelegate.swift; sourceTree = "<group>"; };
+		E7AE90D51BB85EF500A6AA2E /* XYDRegexValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDRegexValidation.swift; sourceTree = "<group>"; };
+		E7AE90D61BB85EF500A6AA2E /* XYDSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDSection.swift; sourceTree = "<group>"; };
+		E7AE90D71BB85EF500A6AA2E /* XYDTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDTextField.swift; sourceTree = "<group>"; };
+		E7AE90D81BB85EF500A6AA2E /* XYDValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDValidation.swift; sourceTree = "<group>"; };
+		E7AE90D91BB85EF500A6AA2E /* XYDConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDConstants.swift; sourceTree = "<group>"; };
+		E7AE90DA1BB85EF500A6AA2E /* XYDFormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDFormController.swift; sourceTree = "<group>"; };
+		E7AE90DB1BB85EF500A6AA2E /* XYDValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XYDValidator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +151,7 @@
 		E7AE908E1BB85E4E00A6AA2E /* XYDFormsDemo2 */ = {
 			isa = PBXGroup;
 			children = (
+				E7AE90B11BB85EF500A6AA2E /* XYDForms */,
 				E7AE90911BB85E4E00A6AA2E /* AppDelegate.swift */,
 				E7AE90931BB85E4E00A6AA2E /* ViewController.swift */,
 				E7AE90951BB85E4E00A6AA2E /* Main.storyboard */,
@@ -110,6 +185,91 @@
 				E7AE90A61BB85E4E00A6AA2E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E7AE90B11BB85EF500A6AA2E /* XYDForms */ = {
+			isa = PBXGroup;
+			children = (
+				E7AE90B21BB85EF500A6AA2E /* Controls */,
+				E7AE90C31BB85EF500A6AA2E /* Delegates */,
+				E7AE90C91BB85EF500A6AA2E /* Dependencies */,
+				E7AE90CD1BB85EF500A6AA2E /* Model */,
+				E7AE90D91BB85EF500A6AA2E /* XYDConstants.swift */,
+				E7AE90DA1BB85EF500A6AA2E /* XYDFormController.swift */,
+				E7AE90DB1BB85EF500A6AA2E /* XYDValidator.swift */,
+			);
+			name = XYDForms;
+			path = ../../XYDForms;
+			sourceTree = "<group>";
+		};
+		E7AE90B21BB85EF500A6AA2E /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				E7AE90B31BB85EF500A6AA2E /* XYDDateFieldCell.swift */,
+				E7AE90B41BB85EF500A6AA2E /* XYDDateFieldCell.xib */,
+				E7AE90B51BB85EF500A6AA2E /* XYDDatePickerViewController.swift */,
+				E7AE90B61BB85EF500A6AA2E /* XYDDatePickerViewController.xib */,
+				E7AE90B71BB85EF500A6AA2E /* XYDFieldCell.swift */,
+				E7AE90B81BB85EF500A6AA2E /* XYDFieldCell.xib */,
+				E7AE90B91BB85EF500A6AA2E /* XYDFieldHeader.swift */,
+				E7AE90BA1BB85EF500A6AA2E /* XYDFieldHeader.xib */,
+				E7AE90BB1BB85EF500A6AA2E /* XYDMultilineFieldCell.swift */,
+				E7AE90BC1BB85EF500A6AA2E /* XYDMultilineFieldCell.xib */,
+				E7AE90BD1BB85EF500A6AA2E /* XYDPhotoFieldCell.swift */,
+				E7AE90BE1BB85EF500A6AA2E /* XYDPhotoFieldCell.xib */,
+				E7AE90BF1BB85EF500A6AA2E /* XYDSwitchFieldCell.swift */,
+				E7AE90C01BB85EF500A6AA2E /* XYDSwitchFieldCell.xib */,
+				E7AE90C11BB85EF500A6AA2E /* XYDTagFieldCell.swift */,
+				E7AE90C21BB85EF500A6AA2E /* XYDTagFieldCell.xib */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		E7AE90C31BB85EF500A6AA2E /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				E7AE90C41BB85EF500A6AA2E /* XYDCollectionViewDataSource.swift */,
+				E7AE90C51BB85EF500A6AA2E /* XYDCollectionViewDelegate.swift */,
+				E7AE90C61BB85EF500A6AA2E /* XYDCollectionViewFlowLayout.swift */,
+				E7AE90C71BB85EF500A6AA2E /* XYDKeyboardHandler.swift */,
+				E7AE90C81BB85EF500A6AA2E /* XYDTextFieldDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		E7AE90C91BB85EF500A6AA2E /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				E7AE90CA1BB85EF500A6AA2E /* FloatLabelTextField.swift */,
+				E7AE90CB1BB85EF500A6AA2E /* Regex.swift */,
+				E7AE90CC1BB85EF500A6AA2E /* TagWriteView.swift */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		E7AE90CD1BB85EF500A6AA2E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E7AE90CE1BB85EF500A6AA2E /* Enums */,
+				E7AE90D11BB85EF500A6AA2E /* XYDCollectionViewCell.swift */,
+				E7AE90D21BB85EF500A6AA2E /* XYDDateField.swift */,
+				E7AE90D31BB85EF500A6AA2E /* XYDField.swift */,
+				E7AE90D41BB85EF500A6AA2E /* XYDFormDelegate.swift */,
+				E7AE90D51BB85EF500A6AA2E /* XYDRegexValidation.swift */,
+				E7AE90D61BB85EF500A6AA2E /* XYDSection.swift */,
+				E7AE90D71BB85EF500A6AA2E /* XYDTextField.swift */,
+				E7AE90D81BB85EF500A6AA2E /* XYDValidation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E7AE90CE1BB85EF500A6AA2E /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				E7AE90CF1BB85EF500A6AA2E /* XYDCharacterValidation.swift */,
+				E7AE90D01BB85EF500A6AA2E /* XYDFieldType.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,8 +352,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7AE90E31BB85EF500A6AA2E /* XYDFieldHeader.xib in Resources */,
+				E7AE90E11BB85EF500A6AA2E /* XYDFieldCell.xib in Resources */,
+				E7AE90E71BB85EF500A6AA2E /* XYDPhotoFieldCell.xib in Resources */,
+				E7AE90DF1BB85EF500A6AA2E /* XYDDatePickerViewController.xib in Resources */,
+				E7AE90DD1BB85EF500A6AA2E /* XYDDateFieldCell.xib in Resources */,
 				E7AE90971BB85E4E00A6AA2E /* Main.storyboard in Resources */,
+				E7AE90E91BB85EF500A6AA2E /* XYDSwitchFieldCell.xib in Resources */,
+				E7AE90EB1BB85EF500A6AA2E /* XYDTagFieldCell.xib in Resources */,
 				E7AE909C1BB85E4E00A6AA2E /* LaunchScreen.xib in Resources */,
+				E7AE90E51BB85EF500A6AA2E /* XYDMultilineFieldCell.xib in Resources */,
 				E7AE90991BB85E4E00A6AA2E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,8 +380,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7AE90FA1BB85EF500A6AA2E /* XYDRegexValidation.swift in Sources */,
+				E7AE91001BB85EF500A6AA2E /* XYDValidator.swift in Sources */,
+				E7AE90EC1BB85EF500A6AA2E /* XYDCollectionViewDataSource.swift in Sources */,
+				E7AE90E01BB85EF500A6AA2E /* XYDFieldCell.swift in Sources */,
+				E7AE90F01BB85EF500A6AA2E /* XYDTextFieldDelegate.swift in Sources */,
+				E7AE90F11BB85EF500A6AA2E /* FloatLabelTextField.swift in Sources */,
+				E7AE90F91BB85EF500A6AA2E /* XYDFormDelegate.swift in Sources */,
+				E7AE90F51BB85EF500A6AA2E /* XYDFieldType.swift in Sources */,
+				E7AE90E21BB85EF500A6AA2E /* XYDFieldHeader.swift in Sources */,
+				E7AE90F31BB85EF500A6AA2E /* TagWriteView.swift in Sources */,
+				E7AE90DE1BB85EF500A6AA2E /* XYDDatePickerViewController.swift in Sources */,
+				E7AE90F21BB85EF500A6AA2E /* Regex.swift in Sources */,
+				E7AE90DC1BB85EF500A6AA2E /* XYDDateFieldCell.swift in Sources */,
+				E7AE90F81BB85EF500A6AA2E /* XYDField.swift in Sources */,
+				E7AE90EE1BB85EF500A6AA2E /* XYDCollectionViewFlowLayout.swift in Sources */,
+				E7AE90F61BB85EF500A6AA2E /* XYDCollectionViewCell.swift in Sources */,
+				E7AE90ED1BB85EF500A6AA2E /* XYDCollectionViewDelegate.swift in Sources */,
+				E7AE90F41BB85EF500A6AA2E /* XYDCharacterValidation.swift in Sources */,
+				E7AE90EF1BB85EF500A6AA2E /* XYDKeyboardHandler.swift in Sources */,
+				E7AE90E41BB85EF500A6AA2E /* XYDMultilineFieldCell.swift in Sources */,
+				E7AE90FB1BB85EF500A6AA2E /* XYDSection.swift in Sources */,
+				E7AE90FE1BB85EF500A6AA2E /* XYDConstants.swift in Sources */,
+				E7AE90EA1BB85EF500A6AA2E /* XYDTagFieldCell.swift in Sources */,
+				E7AE90E81BB85EF500A6AA2E /* XYDSwitchFieldCell.swift in Sources */,
+				E7AE90E61BB85EF500A6AA2E /* XYDPhotoFieldCell.swift in Sources */,
 				E7AE90941BB85E4E00A6AA2E /* ViewController.swift in Sources */,
+				E7AE90F71BB85EF500A6AA2E /* XYDDateField.swift in Sources */,
+				E7AE90FC1BB85EF500A6AA2E /* XYDTextField.swift in Sources */,
+				E7AE90FD1BB85EF500A6AA2E /* XYDValidation.swift in Sources */,
 				E7AE90921BB85E4E00A6AA2E /* AppDelegate.swift in Sources */,
+				E7AE90FF1BB85EF500A6AA2E /* XYDFormController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +606,7 @@
 				E7AE90AD1BB85E4E00A6AA2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7AE90AE1BB85E4E00A6AA2E /* Build configuration list for PBXNativeTarget "XYDFormsDemo2Tests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +615,7 @@
 				E7AE90B01BB85E4E00A6AA2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

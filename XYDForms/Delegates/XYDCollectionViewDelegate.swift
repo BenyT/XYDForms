@@ -18,6 +18,10 @@ class XYDCollectionViewDelegate: NSObject, UICollectionViewDelegate  {
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let field = formController.collectionViewDataSource!.sections[indexPath.section].fields[indexPath.row]
+      println("width: \(collectionView.frame.width)")
+      if field.identifier == "email" {
+         println(field.percentageWidth)
+      }
         return CGSizeMake(collectionView.frame.width * CGFloat(field.percentageWidth), formController.fieldHeight * field.heightMultiplier)
     }
     

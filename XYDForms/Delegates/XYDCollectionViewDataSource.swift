@@ -52,7 +52,7 @@ class XYDCollectionViewDataSource: NSObject, UICollectionViewDataSource, TagWrit
             // todo: RENAME TEXTFIELD
             if let textField = field as? XYDTextField {
                 if let text = textField.value as? String {
-                    println(text)
+//                    println(text)
                     cell?.textField.text = text
                 } else {
                     cell?.textField.text = ""
@@ -61,6 +61,13 @@ class XYDCollectionViewDataSource: NSObject, UICollectionViewDataSource, TagWrit
                 cell?.textField.delegate = textFieldDelegate
                 cell?.textField.errorMessage = textField.errorMessage
                 cell?.textField.indexPath = indexPath
+               
+               if field.identifier == "email" {
+                  cell?.backgroundColor = UIColor.greenColor()
+                  cell?.contentView.backgroundColor = UIColor.blueColor()
+               } else {
+                  cell?.backgroundColor = UIColor.clearColor()
+               }
                 
             }
             

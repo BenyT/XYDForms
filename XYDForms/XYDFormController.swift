@@ -57,6 +57,8 @@ class XYDFormController: UIViewController {
         collectionView.setTranslatesAutoresizingMaskIntoConstraints(false)
         self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|-(0)-[view]-(0)-|", options: NSLayoutFormatOptions.allZeros, metrics: nil, views: ["view": collectionView]))
         self.view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-(0)-[view]-(0)-|", options: NSLayoutFormatOptions.allZeros, metrics: nil, views: ["view": collectionView]))
+      
+      NSNotificationCenter.defaultCenter().addObserver(self, selector: "didRotate", name: UIDeviceOrientationDidChangeNotification, object: nil)
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -122,6 +124,10 @@ class XYDFormController: UIViewController {
       }
         return formIsValid
     }
+   
+   func didRotate() {
+      collectionView.reloadData()
+   }
     
 }
 
