@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+   @IBOutlet weak var formController: UIView!
+   
    override func viewDidLoad() {
       super.viewDidLoad()
 

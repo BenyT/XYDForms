@@ -33,11 +33,11 @@ class XYDKeyboardHandler: NSObject {
     
     // Add bottom padding and scroll if needed
     func keyboardShown(notification: NSNotification) {
-        if let textField = activeTextField {
+        if let _ = activeTextField {
             if keyboardFrame == nil {
                 // Get the cell's frame
                 let value: AnyObject = notification.userInfo![UIKeyboardFrameEndUserInfoKey]!
-                keyboardFrame = formController.view.convertRect(value.CGRectValue(), fromView: nil)
+                keyboardFrame = formController.view.convertRect(value.CGRectValue, fromView: nil)
             }
             // Apply bottom padding
             let intersection = CGRectIntersection(formController.collectionView!.frame, keyboardFrame!)
@@ -46,7 +46,7 @@ class XYDKeyboardHandler: NSObject {
             formController.collectionView!.scrollIndicatorInsets = collectionViewInsets
             // Should scroll?
             let currentIndexPath = activeTextField!.indexPath
-            var visibileItemsItemsPaths: [NSIndexPath] = formController.collectionView!.indexPathsForVisibleItems() as! [NSIndexPath]
+            let visibileItemsItemsPaths: [NSIndexPath] = formController.collectionView!.indexPathsForVisibleItems()
             let activeCellIsHidden = visibileItemsItemsPaths.filter { (indexPath) -> Bool in
                 return indexPath == currentIndexPath
                 }.count == 0

@@ -49,7 +49,7 @@ import UIKit
    // MARK:- Properties
    override var accessibilityLabel:String! {
       get {
-         if text.isEmpty {
+         if text!.isEmpty {
             return titleLabel.text
          } else {
             return text
@@ -110,7 +110,7 @@ import UIKit
    
    // MARK:- Init
    required init(coder aDecoder:NSCoder) {
-      super.init(coder:aDecoder)
+      super.init(coder:aDecoder)!
       setup()
    }
    
@@ -147,7 +147,7 @@ import UIKit
       }
 
       // Should we show or hide the title label?
-      if text.isEmpty {
+      if text!.isEmpty {
          // Hide
          hideTitle(isResp)
       } else {
@@ -158,7 +158,7 @@ import UIKit
    
    override func textRectForBounds(bounds:CGRect) -> CGRect {
       var r = super.textRectForBounds(bounds)
-      if !text.isEmpty {
+      if !text!.isEmpty {
          var top = ceil(titleLabel.font.lineHeight + placeholderYPadding)
          top = min(top, maxTopInset())
          r = UIEdgeInsetsInsetRect(r, UIEdgeInsetsMake(top, 0.0, 0.0, 0.0))
@@ -168,7 +168,7 @@ import UIKit
    
    override func editingRectForBounds(bounds:CGRect) -> CGRect {
       var r = super.editingRectForBounds(bounds)
-      if !text.isEmpty {
+      if !text!.isEmpty {
          var top = ceil(titleLabel.font.lineHeight + placeholderYPadding)
          top = min(top, maxTopInset())
          r = UIEdgeInsetsInsetRect(r, UIEdgeInsetsMake(top, 0.0, 0.0, 0.0))
@@ -178,7 +178,7 @@ import UIKit
    
    override func clearButtonRectForBounds(bounds:CGRect) -> CGRect {
       var r = super.clearButtonRectForBounds(bounds)
-      if !text.isEmpty {
+      if !text!.isEmpty {
          var top = ceil(titleLabel.font.lineHeight + placeholderYPadding)
          top = min(top, maxTopInset())
          r = CGRect(x:r.origin.x, y:r.origin.y + (top * 0.5), width:r.size.width, height:r.size.height)
@@ -198,7 +198,7 @@ import UIKit
    
    private var textIsEmpty: Bool {
       get {
-         return text.isEmpty || text == nil
+         return text!.isEmpty || text == nil
       }
    }
    
@@ -224,18 +224,18 @@ import UIKit
    }
    
    private func maxTopInset()->CGFloat {
-      return max(0, floor(bounds.size.height - font.lineHeight - 4.0))
+      return max(0, floor(bounds.size.height - font!.lineHeight - 4.0))
    }
    
    private func setTitlePositionForTextAlignment() {
-      var r = textRectForBounds(bounds)
+      let r = textRectForBounds(bounds)
       var x = r.origin.x
       if textAlignment == NSTextAlignment.Center {
          x = r.origin.x + (r.size.width * 0.5) - titleLabel.frame.size.width
       } else if textAlignment == NSTextAlignment.Right {
          x = r.origin.x + r.size.width - titleLabel.frame.size.width
       } else if textAlignment == NSTextAlignment.Natural {
-         println("It's natural. We need this.")
+         print("It's natural. We need this.")
          // TODO: Implement later
          //			JVTextDirection baseDirection = [_floatingLabel.text getBaseDirection];
          //			if (baseDirection == JVTextDirectionRightToLeft) {
@@ -247,7 +247,7 @@ import UIKit
    
    private func showTitle(animated:Bool) {
       let dur = animated ? animationDuration : 0
-      UIView.animateWithDuration(dur, delay:0, options: UIViewAnimationOptions.BeginFromCurrentState|UIViewAnimationOptions.CurveEaseOut, animations:{
+      UIView.animateWithDuration(dur, delay:0, options: [.BeginFromCurrentState, .CurveEaseOut], animations:{
          // Animation
          self.titleLabel.alpha = 1.0
          var r = self.titleLabel.frame
@@ -258,7 +258,7 @@ import UIKit
    
    private func hideTitle(animated:Bool) {
       let dur = animated ? animationDuration : 0
-      UIView.animateWithDuration(dur, delay:0, options: UIViewAnimationOptions.BeginFromCurrentState|UIViewAnimationOptions.CurveEaseIn, animations:{
+      UIView.animateWithDuration(dur, delay:0, options: [.BeginFromCurrentState, .CurveEaseIn], animations:{
          // Animation
          self.titleLabel.alpha = 0.0
          var r = self.titleLabel.frame

@@ -8,32 +8,20 @@
 
 import UIKit
 
-class XYDCollectionViewDataSource: NSObject, UICollectionViewDataSource, TagWriteViewDelegate, XYDPhotoFieldCellDelegate, XYDSwitchFieldCellDelegate, XYDDatePickerViewControllerDelegate {
-    
-    var sections: [XYDSection] = []
-    var textFieldDelegate: XYDTextFieldDelegate!
-    var sectionTitles: [String]?
-    
-    var formController: XYDFormController!
-    
-    init(formController: XYDFormController) {
-        self.formController = formController
-    }
-    
+extension XYDFormController: UICollectionViewDataSource {
+   
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        
         let field = sections[indexPath.section].fields[indexPath.row]
-        
         switch field.type {
         case .Photo:
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier(XYZCells.PhotoField, forIndexPath: indexPath) as? XYDPhotoFieldCell
-            cell?.viewController = formController
+            cell?.viewController = self
             cell?.delegate = self
             return cell!
-        case .Tags:
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(XYZCells.TagField, forIndexPath: indexPath) as? XYDTagFieldCell
-            cell?.tagWriteView.delegate = self
-            return cell!
+//        case .Tags:
+//            let cell = collectionView.dequeueReusableCellWithReuseIdentifier(XYZCells.TagField, forIndexPath: indexPath) as? XYDTagFieldCell
+//            cell?.tagWriteView.delegate = self
+//            return cell!
         case .Multiline:
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier(XYZCells.MultilineField, forIndexPath: indexPath) as? XYDMultilineFieldCell
             return cell!
@@ -88,45 +76,6 @@ class XYDCollectionViewDataSource: NSObject, UICollectionViewDataSource, TagWrit
         let headerView = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: XYZCells.Header, forIndexPath: indexPath) as! XYDFieldHeader
         headerView.titleLabel.text = sectionTitles![indexPath.section]
         return headerView
-    }
-    
-    func addField(newField: XYDField, inSection section: Int) {
-        if sections.count <= section {
-            // Create new section
-            sections.insert(XYDSection(), atIndex: section)
-        }
-        sections[section].fields.append(newField)
-    }
-    
-    // MARK: TagWriteViewDelegate
-    
-    func tagWriteViewDidEndEditing(view: TagWriteView!) {
-        println(view.tags)
-        //        formController.delegate?.formController(formController, updatedField: view.superview, atIndexPath: NSIndexPath(forRow: 0, inSection: 0))
-    }
-    
-    func tagWriteView(view: TagWriteView!, didRemoveTag tag: String!) {
-        println(view.tags)
-    }
-    
-    
-    // MARK: ImagePickerManagerDelegate
-    
-    func photoFieldCellDelegate(cell: XYDPhotoFieldCell, didFinishPickingImage image: UIImage!) {
-        cell.photoButton.setBackgroundImage(image, forState: UIControlState.Normal)
-        //        formController.delegate?.formController(formController, updatedField: <#YFBasicField#>, atIndexPath: <#NSIndexPath#>)
-    }
-    
-    func switchFieldCell(switchFieldCell: XYDSwitchFieldCell, newValue: Bool) {
-        let field = sections[switchFieldCell.indexPath.section].fields[switchFieldCell.indexPath.row]
-        field.value = newValue
-        formController.delegate?.formController(formController, updatedField: field, inSection: switchFieldCell.indexPath.section)
-    }
-    
-    func datePickerViewController(field: XYDDateField, date: NSDate) {
-        field.value = date
-        formController.delegate?.formController(formController, updatedField: field, inSection: 0)
-        // todo: fill text field
     }
     
 }

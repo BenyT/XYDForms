@@ -19,11 +19,11 @@ class XYDTextFieldDelegate: NSObject, UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
         if let textField = textField as? YTextField {
-            let field = formController.collectionViewDataSource!.sections[textField.indexPath.section].fields[textField.indexPath.row]
+            let field = formController.sections[textField.indexPath.section].fields[textField.indexPath.row]
             if let dateField = field as? XYDDateField {
                 let datePickerViewController = XYDDatePickerViewController()
                 datePickerViewController.field = dateField
-                datePickerViewController.delegate = formController.collectionViewDataSource
+                datePickerViewController.delegate = formController
                 dateField.viewController.presentViewController(datePickerViewController, animated: true, completion: nil)
                 return false
             } else if field.shouldShowSelector {
@@ -42,7 +42,7 @@ class XYDTextFieldDelegate: NSObject, UITextFieldDelegate {
         if let textField = textField as? YTextField {
             let field = fieldForIndexPath(textField.indexPath)
             field.value = textField.text
-            field.errorMessage = XYDValidator.errorMessageForText(textField.text, withValidation: field.validation)
+            field.errorMessage = XYDValidator.errorMessageForText(textField.text!, withValidation: field.validation)
             (textField as! FloatLabelTextField).errorMessage = field.errorMessage
             if field.errorMessage == nil {
                formController.delegate?.formController(formController, updatedField: field, inSection: textField.indexPath.section)
@@ -57,7 +57,7 @@ class XYDTextFieldDelegate: NSObject, UITextFieldDelegate {
         if let textField = textField as? YTextField {
             let field = fieldForIndexPath(textField.indexPath)
             if let validation = field.validation {
-                if validation.maxCharacters > 0 && (count(textField.text) + count(string) - range.length) > validation.maxCharacters {
+                if validation.maxCharacters > 0 && (textField.text!.characters.count + string.characters.count - range.length) > validation.maxCharacters {
                     return false
                 }
             }
@@ -72,7 +72,7 @@ class XYDTextFieldDelegate: NSObject, UITextFieldDelegate {
     }
    
    func fieldForIndexPath(indexPath: NSIndexPath) -> XYDTextField {
-      return formController.collectionViewDataSource!.sections[indexPath.section].fields[indexPath.row] as! XYDTextField
+      return formController.sections[indexPath.section].fields[indexPath.row] as! XYDTextField
    }
    
 //   func fieldForTexField(textField: UITextField) -> XYDTextField {

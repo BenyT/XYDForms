@@ -19,7 +19,7 @@ class XYDCollectionViewFlowLayout: UICollectionViewFlowLayout {
         
         var yOffset: CGFloat = 0
         var xOffset: CGFloat = 0
-        var currentWidthPercentage: CGFloat = 0
+        let currentWidthPercentage: CGFloat = 0
         
         
         var numberOfInnerRows: CGFloat = 0
@@ -30,7 +30,7 @@ class XYDCollectionViewFlowLayout: UICollectionViewFlowLayout {
             for item in 0..<collectionView!.numberOfItemsInSection(section) {
                 let indexPath = NSIndexPath(forItem: item, inSection: section)
                 
-                let field = formController.collectionViewDataSource!.sections[section].fields[item]
+                let field = formController.sections[section].fields[item]
                 
                 let width = collectionView!.frame.width * field.percentageWidth
                 let height = formController.fieldHeight * field.heightMultiplier
@@ -71,17 +71,16 @@ class XYDCollectionViewFlowLayout: UICollectionViewFlowLayout {
             }
         }
     }
-    
-    override func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject]? {
-        
-        var layoutAttributes = [UICollectionViewLayoutAttributes]()
-        
-        for attributes in cache {
-            if CGRectIntersectsRect(attributes.frame, rect) {
-                layoutAttributes.append(attributes)
-            }
-        }
-        return layoutAttributes
-    }
-    
+   
+   override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+      var layoutAttributes = [UICollectionViewLayoutAttributes]()
+      
+      for attributes in cache {
+         if CGRectIntersectsRect(attributes.frame, rect) {
+            layoutAttributes.append(attributes)
+         }
+      }
+      return layoutAttributes
+   }
+
 }

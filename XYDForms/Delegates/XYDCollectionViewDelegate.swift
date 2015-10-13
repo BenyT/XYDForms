@@ -8,21 +8,17 @@
 
 import UIKit
 
-class XYDCollectionViewDelegate: NSObject, UICollectionViewDelegate  {
-    
-    var formController: XYDFormController!
-    
-    init(formController: XYDFormController) {
-        self.formController = formController
-    }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        let field = formController.collectionViewDataSource!.sections[indexPath.section].fields[indexPath.row]
-      println("width: \(collectionView.frame.width)")
+extension XYDFormController: UICollectionViewDelegate  {
+   
+   // todo: indent
+   
+   func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+      let field = sections[indexPath.section].fields[indexPath.row]
+      print("width: \(collectionView.frame.width)")
       if field.identifier == "email" {
-         println(field.percentageWidth)
+         print(field.percentageWidth)
       }
-        return CGSizeMake(collectionView.frame.width * CGFloat(field.percentageWidth), formController.fieldHeight * field.heightMultiplier)
-    }
-    
+      return CGSizeMake(collectionView.frame.width * CGFloat(field.percentageWidth), fieldHeight * field.heightMultiplier)
+   }
+   
 }
